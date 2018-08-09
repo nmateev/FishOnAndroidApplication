@@ -4,4 +4,9 @@
     <string name="start_journey_icon">Click anywhere to start your journey</string>
     <string name="application_start_image">Application start image</string>
     <string name="search_for_places">Search for places</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fish_me_next_quote">Fish me next quote</string>
+    <string name="fishing_quote">Fishing Quote</string>
 </resources>

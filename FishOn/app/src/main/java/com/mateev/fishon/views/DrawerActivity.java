@@ -1,4 +1,4 @@
-package com.mateev.fishon;
+package com.mateev.fishon.views;
 
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -16,10 +16,13 @@ public abstract class DrawerActivity extends AppCompatActivity {
     private Drawer mDrawer;
 
     private void setupDrawer(Drawer mDrawer) {
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("Home");
-        SecondaryDrawerItem item2 = new SecondaryDrawerItem().withIdentifier(2).withName("Android");
+        PrimaryDrawerItem item1 = new PrimaryDrawerItem()
+                .withIdentifier(1)
+                .withName("Home");
+        SecondaryDrawerItem item2 = new SecondaryDrawerItem()
+                .withIdentifier(2)
+                .withName("Android");
 
-//create the drawer and remember the `Drawer` result object
         mDrawer = new DrawerBuilder()
                 .withActivity(DrawerActivity.this)
                 .withToolbar(getDrawerToolbar())

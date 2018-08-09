@@ -1,15 +1,15 @@
-package com.mateev.fishon;
+package com.mateev.fishon.views;
 
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.mateev.fishon.R;
 
 public class AppLaunchActivity extends AppCompatActivity {
     private ImageView mAppLaunchImage;

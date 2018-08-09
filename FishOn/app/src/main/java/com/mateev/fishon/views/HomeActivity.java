@@ -1,13 +1,17 @@
-package com.mateev.fishon;
+package com.mateev.fishon.views;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
 
+import com.mateev.fishon.R;
+
 import java.util.Objects;
 
 public class HomeActivity extends DrawerActivity {
     private Toolbar mDrawerToolbar;
+    private HomeActivityFragment mHomeActivityFragment;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +20,14 @@ public class HomeActivity extends DrawerActivity {
         mDrawerToolbar = findViewById(R.id.t_drawer_toolbar);
         setSupportActionBar(mDrawerToolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
-     //   getSupportActionBar().setIcon(R.drawable.search);
+        //   getSupportActionBar().setIcon(R.drawable.search);
+        mHomeActivityFragment = HomeActivityFragment.createNewInstance();
+
+        getFragmentManager()
+                .beginTransaction()
+                .replace(R.id.quote_content, mHomeActivityFragment)
+                .commit();
+
 
     }
 
