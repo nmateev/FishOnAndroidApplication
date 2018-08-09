@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FishOn</string>
+    <string name="welcome_to_fishon">Welcome to FishOn!</string>
+    <string name="start_journey_icon">Click anywhere to start your journey</string>
+    <string name="application_start_image">Application start image</string>
+    <string name="search_for_places">Search for places</string>
+</resources>
