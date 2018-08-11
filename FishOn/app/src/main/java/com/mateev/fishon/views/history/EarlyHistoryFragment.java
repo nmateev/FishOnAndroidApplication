@@ -11,6 +11,7 @@ import com.mateev.fishon.R;
 
 public class EarlyHistoryFragment extends Fragment implements IdentifiableFragment {
     private TextView mEarlyHistoryTextView;
+    private TextView mEarlyHistoryStartingTextView;
 
     public EarlyHistoryFragment() {
         // Required empty public constructor
@@ -23,6 +24,8 @@ public class EarlyHistoryFragment extends Fragment implements IdentifiableFragme
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_early_history, container, false);
+        mEarlyHistoryStartingTextView= view.findViewById(R.id.tv_history_starting_text_view);
+        mEarlyHistoryStartingTextView.setText("Starting information");
         mEarlyHistoryTextView = view.findViewById(R.id.tv_history_text_view);
         mEarlyHistoryTextView.setText("Early information");
 

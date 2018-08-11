@@ -47,7 +47,6 @@ public class AppLaunchActivity extends AppCompatActivity {
     private static void animateText(TextView textView) {
         Animation animatedText = new AlphaAnimation(0.0f, 3.0f);
         animatedText.setDuration(1000);
-        animatedText.setStartOffset(10);
         animatedText.setRepeatMode(Animation.REVERSE);
         animatedText.setRepeatCount(Animation.INFINITE);
         textView.startAnimation(animatedText);

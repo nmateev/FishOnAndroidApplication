@@ -3,6 +3,6 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:src="@drawable/header"
+    android:src="@drawable/drawerheader"
     android:adjustViewBounds="true"
     android:scaleType="fitCenter"/>

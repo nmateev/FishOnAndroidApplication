@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.fishingtypes.FishingTypesActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/t_drawer_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorAccent" />
+
+    <LinearLayout
+        android:id="@+id/ll_image_buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/t_drawer_toolbar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/ib_lake_fishing"
+                style="@style/ImageButtonStyle"
+                android:contentDescription="@string/lake_fishing"
+                android:src="@drawable/lakefishing" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@color/md_white_1000" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/ib_river_fishing"
+                style="@style/ImageButtonStyle"
+                android:contentDescription="@string/river_fishing"
+                android:src="@drawable/riverfishing" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@color/md_white_1000" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/ib_sea_fishing"
+                style="@style/ImageButtonStyle"
+                android:contentDescription="@string/sea_fishing"
+                android:src="@drawable/seafishing" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

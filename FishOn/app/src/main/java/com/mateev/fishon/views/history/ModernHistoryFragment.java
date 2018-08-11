@@ -31,7 +31,7 @@ public class ModernHistoryFragment extends Fragment implements IdentifiableFragm
 
     @Override
     public String getName() {
-        return "MODERN HISTORY";
+        return "MODERN";
     }
 
     public static ModernHistoryFragment createNewInstance() {

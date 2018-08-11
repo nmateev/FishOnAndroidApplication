@@ -35,6 +35,6 @@ public class PreHistoryFragment extends Fragment implements IdentifiableFragment
 
     @Override
     public String getName() {
-        return "PRE HISTORY";
+        return "PRE";
     }
 }

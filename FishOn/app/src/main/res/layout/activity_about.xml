@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.about.AboutActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/t_drawer_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorAccent" />
+
+    <ScrollView
+        android:id="@+id/sv_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/t_drawer_toolbar"
+        android:scrollbarFadeDuration="450"
+        android:scrollbarSize="5dip"
+        android:scrollbarThumbVertical="@color/colorAccent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_about_picture"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/aboutpicture" />
+
+            <TextView
+                android:id="@+id/tv_about_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/MediumPadding"
+                android:paddingBottom="@dimen/MediumPadding"
+                android:paddingStart="@dimen/smallpadding"
+                android:paddingEnd="@dimen/smallpadding"
+                android:layout_below="@+id/iv_about_picture"
+                android:scrollbars="vertical" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

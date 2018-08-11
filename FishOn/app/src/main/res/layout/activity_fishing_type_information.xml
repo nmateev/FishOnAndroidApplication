@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.fishingtypes.FishingTypeInformationActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/t_drawer_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorAccent" />
+
+    <ScrollView
+        android:id="@+id/sv_fishing_type_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/t_drawer_toolbar"
+        android:scrollbarFadeDuration="450"
+        android:scrollbarSize="5dip"
+        android:scrollbarThumbVertical="@color/colorAccent">
+
+        <TextView
+            android:id="@+id/tv_fishing_type_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/smallpadding"
+            android:paddingEnd="@dimen/smallpadding"
+            android:paddingStart="@dimen/smallpadding"
+            android:paddingTop="@dimen/smallpadding"
+            android:scrollbars="vertical" />
+    </ScrollView>
+</RelativeLayout>

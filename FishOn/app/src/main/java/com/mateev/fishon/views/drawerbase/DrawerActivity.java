@@ -6,7 +6,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.mateev.fishon.R;
+import com.mateev.fishon.views.about.AboutActivity;
+import com.mateev.fishon.views.fishingtypes.FishingTypesActivity;
 import com.mateev.fishon.views.history.HistoryActivity;
+import com.mateev.fishon.views.home.HomeActivity;
+import com.mateev.fishon.views.personalrecords.PersonalRecordsActivity;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
@@ -24,7 +28,7 @@ public abstract class DrawerActivity extends AppCompatActivity {
 
         AccountHeader header = new AccountHeaderBuilder()
                 .withActivity(DrawerActivity.this)
-                .withHeaderBackground(R.drawable.header)
+                .withHeaderBackground(R.drawable.drawerheader)
                 .withTranslucentStatusBar(true)
                 .withCompactStyle(true)
                 .build();
@@ -65,13 +69,13 @@ public abstract class DrawerActivity extends AppCompatActivity {
                         new DividerDrawerItem(),
                         item3.withIcon(GoogleMaterial.Icon.gmd_android),
                         new DividerDrawerItem(),
-                        item4.withIcon(GoogleMaterial.Icon.gmd_android),
+                        item4.withIcon(R.drawable.drawerpersonalrecordsicon),
                         new DividerDrawerItem(),
-                        item5.withIcon(GoogleMaterial.Icon.gmd_android),
+                        item5.withIcon(R.drawable.fishingtypesicon),
                         new DividerDrawerItem(),
-                        item6.withIcon(GoogleMaterial.Icon.gmd_android),
+                        item6.withIcon(R.drawable.drawerhistoryicon),
                         new DividerDrawerItem(),
-                        item7.withIcon(GoogleMaterial.Icon.gmd_android)
+                        item7.withIcon(GoogleMaterial.Icon.gmd_info)
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
@@ -79,6 +83,18 @@ public abstract class DrawerActivity extends AppCompatActivity {
                         long mDrawerPosition = drawerItem.getIdentifier();
                         if (mDrawerPosition == 6) {
                             Intent intent = new Intent(DrawerActivity.this, HistoryActivity.class);
+                            startActivity(intent);
+                        } else if (mDrawerPosition == 7) {
+                            Intent intent = new Intent(DrawerActivity.this, AboutActivity.class);
+                            startActivity(intent);
+                        }else if(mDrawerPosition ==1){
+                            Intent intent = new Intent(DrawerActivity.this, HomeActivity.class);
+                            startActivity(intent);
+                        }else if(mDrawerPosition ==5){
+                            Intent intent = new Intent(DrawerActivity.this, FishingTypesActivity.class);
+                            startActivity(intent);
+                        }else if(mDrawerPosition ==4){
+                            Intent intent = new Intent(DrawerActivity.this, PersonalRecordsActivity.class);
                             startActivity(intent);
                         }
                         return true;

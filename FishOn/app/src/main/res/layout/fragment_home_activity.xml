@@ -1,60 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/rl_fragment_layout"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sv_home_fragment_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mateev.fishon.views.home.HomeActivity">
+    android:scrollbarFadeDuration="450"
+    android:scrollbarSize="5dip"
+    android:scrollbarThumbVertical="@color/colorAccent">
 
-    <ImageView
-        android:id="@+id/iv_home_activity_base_image"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/fish_me_next_quote"
-        android:scaleType="fitXY"
-        android:src="@drawable/homeactivitybasepicture" />
+        tools:context="com.mateev.fishon.views.home.HomeActivity">
 
-    <TextView
-        android:id="@+id/tv_quote_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/iv_home_activity_base_image"
-        android:gravity="center"
-        android:layout_centerInParent="true"
-        android:text="@string/fishing_quote"
-        android:textSize="@dimen/SmallText"
-        android:layout_marginTop="@dimen/smallmargin"
-        android:layout_marginBottom="5dp"/>
+        <ImageView
+            android:id="@+id/iv_home_activity_base_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/fish_me_next_quote"
+            android:scaleType="fitXY"
+            android:paddingBottom="20dp"
+            android:src="@drawable/homeactivitybasepicture" />
 
-    <ScrollView
-        android:id="@+id/sv_scroll_view_text"
-        android:layout_width="match_parent"
-        android:layout_height="185dp"
-        android:layout_below="@+id/tv_quote_text_view"
-        android:scrollbarFadeDuration="450"
-        android:scrollbarSize="5dip"
-        android:scrollbarThumbVertical="@color/colorAccent">
+        <TextView
+            android:id="@+id/tv_quote_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_home_activity_base_image"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="@string/fishing_quote"
+            android:textSize="@dimen/SmallText" />
+
 
         <TextView
             android:id="@+id/tv_quote_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_quote_text_view"
             android:paddingBottom="@dimen/smallpadding"
             android:paddingEnd="@dimen/smallpadding"
             android:paddingStart="@dimen/smallpadding"
             android:paddingTop="@dimen/smallpadding"
             android:scrollbars="vertical"
             android:text="@string/hello_blank_fragment" />
-    </ScrollView>
 
-    <Button
-        android:id="@+id/btn_fish_for_quote"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_alignEnd="@+id/sv_scroll_view_text"
-        android:layout_below="@id/sv_scroll_view_text"
-        android:background="@drawable/round_button"
-        android:layout_marginTop="@dimen/smallmargin"
-        android:layout_marginEnd="@dimen/smallmargin"
-        android:text="@string/fish_me_next_quote" />
-</RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_fish_for_quote"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/tv_quote_text"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="130dp"
+            android:paddingBottom="@dimen/smallpadding"
+            android:background="@drawable/round_button"
+            android:text="@string/fish_me_next_quote" />
+    </RelativeLayout>
+
+</ScrollView>
+

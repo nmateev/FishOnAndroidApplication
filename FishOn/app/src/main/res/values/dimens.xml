@@ -8,4 +8,6 @@
     <dimen name="material_drawer_item_profile_description">20sp</dimen>
     <dimen name="smallpadding">10dp</dimen>
     <dimen name="smallmargin">10dp</dimen>
+    <dimen name="BigPadding">50dp</dimen>
+    <dimen name="MediumPadding">30dp</dimen>
 </resources>

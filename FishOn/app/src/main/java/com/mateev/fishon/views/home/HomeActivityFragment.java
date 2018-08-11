@@ -34,7 +34,17 @@ public class HomeActivityFragment extends Fragment {
         mQuoteButton.setOnClickListener(view -> {
             view.startAnimation(mButtonClickAnimation);
 
-            mQuoteTextView.setText("Text for testing");
+            mQuoteTextView.setText("Text for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testing" +
+                    "Text for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testing" +
+                    "Text for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testing" +
+                    "Text for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testing" +
+                    "Text for testingText for testingText for testingText for testingText for testingText for testing" +
+                    "Text for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testing" +
+                    "Text for testingText for testingText for testingText for testingText for testingText for testing" +
+                    "Text for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testing" +
+                    "Text for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testingText for testing" +
+                    "" +
+                    "");
         });
 
         return root;

@@ -18,6 +18,10 @@
         </activity>
         <activity android:name=".views.home.HomeActivity" />
         <activity android:name=".views.history.HistoryActivity" />
+        <activity android:name=".views.about.AboutActivity" />
+        <activity android:name=".views.fishingtypes.FishingTypesActivity" />
+        <activity android:name=".views.fishingtypes.FishingTypeInformationActivity" />
+        <activity android:name=".views.personalrecords.PersonalRecordsActivity"></activity>
     </application>
 
 </manifest>
