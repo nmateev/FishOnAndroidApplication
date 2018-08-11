@@ -10,11 +10,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mateev.fishon.R;
+import com.mateev.fishon.views.home.HomeActivity;
 
 public class AppLaunchActivity extends AppCompatActivity {
     private ImageView mAppLaunchImage;
     private TextView mClickAnywhereMessage;
 
+    public AppLaunchActivity() {
+        // Required empty public constructor
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

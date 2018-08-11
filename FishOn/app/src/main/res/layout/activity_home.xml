@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mateev.fishon.views.HomeActivity">
+    tools:context="com.mateev.fishon.views.home.HomeActivity">
 
 
     <android.support.v7.widget.Toolbar
@@ -28,7 +28,7 @@
     </LinearLayout>
 
     <FrameLayout
-        android:id="@+id/quote_content"
+        android:id="@+id/fr_home_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/t_drawer_toolbar"/>

@@ -1,4 +1,4 @@
-package com.mateev.fishon.views;
+package com.mateev.fishon.views.home;
 
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;

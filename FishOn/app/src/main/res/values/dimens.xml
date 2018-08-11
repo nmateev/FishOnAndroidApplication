@@ -3,7 +3,9 @@
     <dimen name="BigText">30sp</dimen>
     <dimen name="MediumText">22sp</dimen>
     <dimen name="SmallText">18sp</dimen>
-    <dimen name="material_drawer_item_primary_text">18sp</dimen>
+    <dimen name="material_drawer_item_primary_text">16sp</dimen>
+
+    <dimen name="material_drawer_item_profile_description">20sp</dimen>
     <dimen name="smallpadding">10dp</dimen>
     <dimen name="smallmargin">10dp</dimen>
 </resources>

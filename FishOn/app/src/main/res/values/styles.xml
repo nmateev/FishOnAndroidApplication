@@ -11,11 +11,10 @@
         <item name="material_drawer_background">@color/colorPrimary</item>
         <item name="material_drawer_primary_text">@color/colorAccent</item>
         <item name="material_drawer_primary_icon">@color/colorAccent</item>
-        <item name="material_drawer_secondary_text">@color/material_drawer_header_selection_text</item>
+        <item name="material_drawer_secondary_text">@color/material_drawer_header_selection_text
+        </item>
         <item name="material_drawer_hint_text">@color/material_drawer_header_selection_text</item>
         <item name="material_drawer_divider">@color/colorAccent</item>
-
-
         <item name="material_drawer_selected">@color/colorAccent</item>
         <item name="material_drawer_selected_text">@color/material_drawer_selected_text</item>
         <item name="material_drawer_header_selection_text">@color/colorAccent</item>
@@ -29,4 +28,10 @@
         <item name="android:textColor">@color/colorAccent</item>
     </style>
 
+    <style name="TabLayoutStyle" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name= "tabSelectedTextColor">@color/colorPrimary</item>
+        <item name= "tabTextColor">@color/md_white_1000</item>
+    </style>
 </resources>

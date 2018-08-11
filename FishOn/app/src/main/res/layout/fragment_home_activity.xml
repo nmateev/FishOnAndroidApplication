@@ -4,7 +4,7 @@
     android:id="@+id/rl_fragment_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mateev.fishon.views.HomeActivity">
+    tools:context="com.mateev.fishon.views.home.HomeActivity">
 
     <ImageView
         android:id="@+id/iv_home_activity_base_image"

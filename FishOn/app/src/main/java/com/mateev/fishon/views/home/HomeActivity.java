@@ -1,10 +1,9 @@
-package com.mateev.fishon.views;
+package com.mateev.fishon.views.home;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-
-
 import com.mateev.fishon.R;
+import com.mateev.fishon.views.drawerbase.DrawerActivity;
 
 import java.util.Objects;
 
@@ -22,10 +21,9 @@ public class HomeActivity extends DrawerActivity {
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
         //   getSupportActionBar().setIcon(R.drawable.search);
         mHomeActivityFragment = HomeActivityFragment.createNewInstance();
-
         getFragmentManager()
                 .beginTransaction()
-                .replace(R.id.quote_content, mHomeActivityFragment)
+                .replace(R.id.fr_home_content, mHomeActivityFragment)
                 .commit();
 
 
