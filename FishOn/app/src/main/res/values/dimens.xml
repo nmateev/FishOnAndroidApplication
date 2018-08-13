@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="BigText">30sp</dimen>
-    <dimen name="MediumText">22sp</dimen>
+
     <dimen name="SmallText">18sp</dimen>
-    <dimen name="material_drawer_item_primary_text">16sp</dimen>
+    <dimen name="MediumText">22sp</dimen>
+    <dimen name="BigText">30sp</dimen>
 
     <dimen name="material_drawer_item_profile_description">20sp</dimen>
-    <dimen name="smallpadding">10dp</dimen>
-    <dimen name="smallmargin">10dp</dimen>
-    <dimen name="BigPadding">50dp</dimen>
+    <dimen name="material_drawer_item_primary_text">16sp</dimen>
+
+    <dimen name="SmallPadding">10dp</dimen>
     <dimen name="MediumPadding">30dp</dimen>
+    <dimen name="BigPadding">50dp</dimen>
+    <dimen name="SmallMargin">10dp</dimen>
+    <dimen name="MediumMargin">20dp</dimen>
+    <dimen name="BigMargin">40dp</dimen>
 </resources>

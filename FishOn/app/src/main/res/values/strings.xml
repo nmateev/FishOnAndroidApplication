@@ -11,4 +11,9 @@
     <string name="sea_fishing">sea_fishing</string>
     <string name="river_fishing">river_fishing</string>
     <string name="lake_fishing">lake_fishing</string>
+    <string name="your_personal_records">Your personal records:</string>
+    <string name="adding_new_record">Adding new record</string>
+    <string name="personal_record_image">Personal record image</string>
+    <string name="add_new_record_tip_message">You can add your new personal record by clicking the plus icon.</string>
+    <string name="you_must_fill_in_all_of_the_fields">You must fill in all of the fields.</string>
 </resources>

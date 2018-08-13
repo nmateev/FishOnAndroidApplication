@@ -18,8 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:contentDescription="@string/fish_me_next_quote"
-            android:scaleType="fitXY"
             android:paddingBottom="20dp"
+            android:scaleType="fitXY"
             android:src="@drawable/homeactivitybasepicture" />
 
         <TextView
@@ -27,9 +27,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/iv_home_activity_base_image"
+            android:layout_centerHorizontal="true"
             android:layout_marginBottom="5dp"
             android:gravity="center"
-            android:layout_centerHorizontal="true"
             android:text="@string/fishing_quote"
             android:textSize="@dimen/SmallText" />
 
@@ -39,10 +39,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_quote_text_view"
-            android:paddingBottom="@dimen/smallpadding"
-            android:paddingEnd="@dimen/smallpadding"
-            android:paddingStart="@dimen/smallpadding"
-            android:paddingTop="@dimen/smallpadding"
+            android:paddingBottom="@dimen/SmallPadding"
+            android:paddingEnd="@dimen/SmallPadding"
+            android:paddingStart="@dimen/SmallPadding"
+            android:paddingTop="@dimen/SmallPadding"
+            android:layout_marginBottom="100dp"
             android:scrollbars="vertical"
             android:text="@string/hello_blank_fragment" />
 
@@ -51,12 +52,13 @@
             android:id="@+id/btn_fish_for_quote"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_below="@id/tv_quote_text"
+            android:layout_marginBottom="20dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginTop="130dp"
-            android:paddingBottom="@dimen/smallpadding"
+            android:layout_marginTop="20dp"
+
+
             android:background="@drawable/round_button"
             android:text="@string/fish_me_next_quote" />
     </RelativeLayout>

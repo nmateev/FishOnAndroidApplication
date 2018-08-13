@@ -24,10 +24,10 @@
             android:id="@+id/tv_fishing_type_information"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/smallpadding"
-            android:paddingEnd="@dimen/smallpadding"
-            android:paddingStart="@dimen/smallpadding"
-            android:paddingTop="@dimen/smallpadding"
+            android:paddingBottom="@dimen/SmallPadding"
+            android:paddingEnd="@dimen/SmallPadding"
+            android:paddingStart="@dimen/SmallPadding"
+            android:paddingTop="@dimen/SmallPadding"
             android:scrollbars="vertical" />
     </ScrollView>
 </RelativeLayout>

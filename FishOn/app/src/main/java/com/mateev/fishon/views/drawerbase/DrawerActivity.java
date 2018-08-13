@@ -56,8 +56,8 @@ public abstract class DrawerActivity extends AppCompatActivity {
                 .withName("About");
 
 
-        mDrawer = new DrawerBuilder().
-                withCloseOnClick(true)
+        mDrawer = new DrawerBuilder()
+                .withCloseOnClick(true)
                 .withActivity(DrawerActivity.this)
                 .withToolbar(getDrawerToolbar())
                 .withTranslucentStatusBar(false)
@@ -65,13 +65,13 @@ public abstract class DrawerActivity extends AppCompatActivity {
                 .addDrawerItems(
                         item1.withIcon(GoogleMaterial.Icon.gmd_home),
                         new DividerDrawerItem(),
-                        item2.withIcon(GoogleMaterial.Icon.gmd_android),
+                        item2.withIcon(R.drawable.drawerwishlisticon),
                         new DividerDrawerItem(),
-                        item3.withIcon(GoogleMaterial.Icon.gmd_android),
+                        item3.withIcon(R.drawable.drawervisitedplaces),
                         new DividerDrawerItem(),
                         item4.withIcon(R.drawable.drawerpersonalrecordsicon),
                         new DividerDrawerItem(),
-                        item5.withIcon(R.drawable.fishingtypesicon),
+                        item5.withIcon(R.drawable.drawerfishingtypesicon),
                         new DividerDrawerItem(),
                         item6.withIcon(R.drawable.drawerhistoryicon),
                         new DividerDrawerItem(),
@@ -87,13 +87,13 @@ public abstract class DrawerActivity extends AppCompatActivity {
                         } else if (mDrawerPosition == 7) {
                             Intent intent = new Intent(DrawerActivity.this, AboutActivity.class);
                             startActivity(intent);
-                        }else if(mDrawerPosition ==1){
+                        } else if (mDrawerPosition == 1) {
                             Intent intent = new Intent(DrawerActivity.this, HomeActivity.class);
                             startActivity(intent);
-                        }else if(mDrawerPosition ==5){
+                        } else if (mDrawerPosition == 5) {
                             Intent intent = new Intent(DrawerActivity.this, FishingTypesActivity.class);
                             startActivity(intent);
-                        }else if(mDrawerPosition ==4){
+                        } else if (mDrawerPosition == 4) {
                             Intent intent = new Intent(DrawerActivity.this, PersonalRecordsActivity.class);
                             startActivity(intent);
                         }
@@ -111,5 +111,11 @@ public abstract class DrawerActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         setupDrawer();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mDrawer.closeDrawer();
     }
 }

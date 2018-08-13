@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.personalrecords.DetailedFishRecordActivity">
+
+    <com.mateev.fishon.views.personalrecords.CustomView
+        android:id="@+id/cv_custom_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+    <TextView
+        android:id="@+id/tv_fish_country_field"
+        style="@style/RecordTextViewField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cv_custom_view"
+        android:layout_marginStart="@dimen/MediumMargin" />
+
+    <TextView
+        android:id="@+id/tv_fish_country_info"
+        style="@style/RecordTextViewInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cv_custom_view"
+        android:layout_toEndOf="@+id/tv_fish_country_field" />
+
+    <TextView
+        android:id="@+id/tv_fish_year_caught_field"
+        style="@style/RecordTextViewField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_fish_country_field"
+        android:layout_marginStart="@dimen/MediumMargin" />
+
+    <TextView
+        android:id="@+id/tv_fish_year_caught_info"
+        style="@style/RecordTextViewInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/tv_fish_year_caught_field"
+        android:layout_below="@+id/tv_fish_country_info"/>
+
+    <TextView
+        android:id="@+id/tv_fish_weight_field"
+        style="@style/RecordTextViewField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_fish_year_caught_field"
+        android:layout_marginStart="@dimen/MediumMargin" />
+
+    <TextView
+        android:id="@+id/tv_fish_weight_info"
+        style="@style/RecordTextViewInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/tv_fish_weight_field"
+        android:layout_below="@+id/tv_fish_year_caught_info"/>
+
+    <TextView
+        android:id="@+id/tv_fish_length_field"
+        style="@style/RecordTextViewField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_fish_weight_field"
+        android:layout_marginStart="@dimen/MediumMargin" />
+
+    <TextView
+        android:id="@+id/tv_fish_length_info"
+        style="@style/RecordTextViewInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/tv_fish_length_field"
+        android:layout_below="@+id/tv_fish_weight_info"/>
+
+</RelativeLayout>

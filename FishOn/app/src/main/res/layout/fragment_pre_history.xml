@@ -31,8 +31,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/iv_early_history_picture"
                 android:paddingBottom="@dimen/BigPadding"
-                android:paddingEnd="@dimen/smallpadding"
-                android:paddingStart="@dimen/smallpadding"
+                android:paddingEnd="@dimen/SmallPadding"
+                android:paddingStart="@dimen/SmallPadding"
                 android:paddingTop="@dimen/BigPadding" />
         </RelativeLayout>
 

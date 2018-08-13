@@ -35,8 +35,8 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="@dimen/MediumPadding"
                 android:paddingBottom="@dimen/MediumPadding"
-                android:paddingStart="@dimen/smallpadding"
-                android:paddingEnd="@dimen/smallpadding"
+                android:paddingStart="@dimen/SmallPadding"
+                android:paddingEnd="@dimen/SmallPadding"
                 android:layout_below="@+id/iv_about_picture"
                 android:scrollbars="vertical" />
 

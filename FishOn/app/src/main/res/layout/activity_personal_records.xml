@@ -11,8 +11,45 @@
         android:layout_height="40dp"
         android:background="@color/colorAccent" />
 
+    <ImageView
+        android:id="@+id/iv_records_image"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_below="@+id/t_drawer_toolbar"
+        android:scaleType="fitXY"
+        android:src="@drawable/personalrecordactivityimage"
+        android:contentDescription="@string/personal_record_image" />
+
+    <ImageButton
+        android:id="@+id/ib_add_new_record"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/iv_records_image"
+        android:layout_marginBottom="@dimen/BigMargin"
+        android:layout_marginEnd="@dimen/SmallMargin"
+        android:layout_marginTop="@dimen/SmallMargin"
+        android:layout_toEndOf="@+id/tv_personal_record_message"
+        android:background="@null"
+        android:contentDescription="@string/adding_new_record"
+        android:src="@drawable/ib_add_new_record" />
+
+    <TextView
+        android:id="@+id/tv_personal_record_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fr_personal_records_list"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:paddingEnd="@dimen/SmallPadding"
+        android:paddingStart="@dimen/SmallPadding"
+        android:text="@string/your_personal_records"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/MediumText" />
+
     <FrameLayout
+        android:id="@+id/fr_personal_records_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/t_drawer_toolbar" />
+        android:layout_below="@+id/ib_add_new_record" />
 </RelativeLayout>
