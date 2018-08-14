@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.locatons.visitedplaces.VisitedPlacesActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/t_drawer_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorAccent" />
+
+
+   <FrameLayout
+       android:id="@+id/fr_visited_locations_list_view"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_below="@+id/t_drawer_toolbar"
+       android:layout_above="@+id/ib_add_new_visited_place">
+   </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/ib_add_new_visited_place"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/BigMargin"
+        android:layout_marginTop="@dimen/SmallMargin"
+        android:background="@null"
+        android:contentDescription="@string/adding_new_visited_place"
+        android:src="@drawable/ib_add_new_item" />
+
+</RelativeLayout>

@@ -16,4 +16,15 @@
     <string name="personal_record_image">Personal record image</string>
     <string name="add_new_record_tip_message">You can add your new personal record by clicking the plus icon.</string>
     <string name="you_must_fill_in_all_of_the_fields">You must fill in all of the fields.</string>
+    <string name="adding_new_visited_place">Adding new visited place</string>
+    <string name="adding_new_place_to_wish_list">Adding new location to wish list</string>
+    <string name="add">ADD</string>
+
+
+    <string-array name="water_basin_types_array">
+        <item>River</item>
+        <item>Lake</item>
+        <item>Sea</item>
+    </string-array>
+
 </resources>

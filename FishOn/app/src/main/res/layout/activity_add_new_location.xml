@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.personalrecords.AddNewFishRecordActivity">
+    tools:context=".views.locatons.AddNewLocationActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/t_drawer_toolbar"
@@ -27,64 +27,43 @@
         android:textSize="@dimen/MediumText" />
 
     <EditText
-        android:id="@+id/et_add_fish_species_field"
+        android:id="@+id/et_add_country_field"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_fill_all_fields_message"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="@dimen/MediumMargin"
-        android:hint="Species"
-        android:inputType="text" />
-
-    <EditText
-        android:id="@+id/et_add_country_caught__field"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/et_add_fish_species_field"
         android:layout_centerInParent="true"
         android:layout_marginTop="@dimen/MediumMargin"
         android:hint="Country"
         android:inputType="text" />
 
     <EditText
-        android:id="@+id/et_add_year_caught_field"
+        android:id="@+id/et_add_water_basin_name_field"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/et_add_country_caught__field"
+        android:layout_below="@id/et_add_country_field"
         android:layout_centerInParent="true"
         android:layout_marginTop="@dimen/MediumMargin"
-        android:hint="Year caught"
-        android:inputType="number" />
+        android:hint="Name"
+        android:inputType="text" />
 
-    <EditText
-        android:id="@+id/et_add_weight_field"
+    <Spinner
+        android:id="@+id/sp_water_basin_type"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/et_add_year_caught_field"
+        android:layout_below="@+id/et_add_water_basin_name_field"
         android:layout_centerInParent="true"
         android:layout_marginTop="@dimen/MediumMargin"
-        android:hint="Weight in kg."
-        android:inputType="numberDecimal" />
-
-    <EditText
-        android:id="@+id/et_add_length_field"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/et_add_weight_field"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="@dimen/MediumMargin"
-        android:hint="Length in metres"
-        android:inputType="numberDecimal" />
-
+        android:backgroundTint="@color/colorAccent" />
     <Button
-        android:id="@+id/btn_add_fish_record"
+        android:id="@+id/btn_add_new_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/et_add_length_field"
+        android:layout_below="@+id/sp_water_basin_type"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/BigMargin"
+        android:layout_marginTop="@dimen/ExtraBigMargin"
         android:background="@color/colorAccent"
         android:clickable="true"
-        android:focusable="true"
-        android:text="@string/add" />
+        android:text="@string/add"
+        android:focusable="true" />
+
 </RelativeLayout>

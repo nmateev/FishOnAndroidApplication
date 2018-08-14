@@ -2,22 +2,22 @@ package com.mateev.fishon.models;
 
 import java.io.Serializable;
 
-public class Fish implements Serializable {
+public class FishRecord implements Serializable {
 
     public String speciesName;
     public String yearCaught;
-    public String country;
+    public String countryCaught;
     public double weight;
     public double length;
 
-    public Fish() {
-
+    public FishRecord() {
+        // Required empty public constructor
     }
 
-    public Fish(String speciesName, String yearCaught, String country, double length, double weight) {
+    public FishRecord(String speciesName, String yearCaught, String countryCaught, double length, double weight) {
         setSpeciesName(speciesName);
         setYearCaught(yearCaught);
-        setCountry(country);
+        setCountryCaught(countryCaught);
         setLength(length);
         setWeight(weight);
     }
@@ -30,8 +30,8 @@ public class Fish implements Serializable {
         return yearCaught;
     }
 
-    public String getCountry() {
-        return country;
+    public String getCountryCaught() {
+        return countryCaught;
     }
 
     public double getWeight() {
@@ -50,8 +50,8 @@ public class Fish implements Serializable {
         this.yearCaught = yearCaught;
     }
 
-    private void setCountry(String country) {
-        this.country = country;
+    private void setCountryCaught(String countryCaught) {
+        this.countryCaught = countryCaught;
     }
 
     private void setWeight(double weight) {

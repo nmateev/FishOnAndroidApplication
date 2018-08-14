@@ -2,10 +2,9 @@ package com.mateev.fishon.utilities;
 
 import java.util.Calendar;
 
-public class FishRecordInputValidator {
+public class FishRecordInputValidator extends InputValidator {
     private static final int INVALID_NUMBER = 0;
     private static final int MIN_NUMBER_LENGTH = 1;
-    private static final int MIN_STRING_LENGTH = 3;
     private static final int YEAR_LENGTH = 4;
     private static final int MIN_SUPPORTED_YEAR = 1910;
 

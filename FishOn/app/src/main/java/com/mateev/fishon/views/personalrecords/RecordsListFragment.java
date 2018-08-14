@@ -12,12 +12,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.mateev.fishon.R;
-import com.mateev.fishon.models.Fish;
+import com.mateev.fishon.models.FishRecord;
 
-import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -25,8 +23,8 @@ import java.util.Objects;
 public class RecordsListFragment extends Fragment {
     private static String CLICKED_FISH_EXTRA_KEY = "clicked-fish";
     private ListView mPersonalRecordsListView;
-    private ArrayAdapter<Fish> mPersonalRecordsArrayAdapter;
-    private List<Fish> mPersonalFishRecordsList;
+    private ArrayAdapter<FishRecord> mPersonalRecordsArrayAdapter;
+    private List<FishRecord> mPersonalFishRecordRecordsList;
 
     public RecordsListFragment() {
         // Required empty public constructor
@@ -37,7 +35,7 @@ public class RecordsListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        mPersonalFishRecordsList = new ArrayList<>();
+        mPersonalFishRecordRecordsList = new ArrayList<>();
         getPersonalRecordsFromDatabase();
 
         View view = inflater.inflate(R.layout.fragment_records_list, container, false);
@@ -47,9 +45,9 @@ public class RecordsListFragment extends Fragment {
 
         mPersonalRecordsListView.setOnItemClickListener((parent, currentView, position, id) -> {
 
-            Fish clickedFish = mPersonalRecordsArrayAdapter.getItem(position);
+            FishRecord clickedFishRecord = mPersonalRecordsArrayAdapter.getItem(position);
             Intent intent = new Intent(getContext(), DetailedFishRecordActivity.class);
-            intent.putExtra(CLICKED_FISH_EXTRA_KEY, clickedFish);
+            intent.putExtra(CLICKED_FISH_EXTRA_KEY, clickedFishRecord);
             startActivity(intent);
         });
 
@@ -61,9 +59,9 @@ public class RecordsListFragment extends Fragment {
         return new RecordsListFragment();
     }
 
-    private ArrayAdapter<Fish> initArrayAdapter() {
+    private ArrayAdapter<FishRecord> initArrayAdapter() {
 
-        return new ArrayAdapter<Fish>(getContext(), android.R.layout.simple_list_item_1, mPersonalFishRecordsList) {
+        return new ArrayAdapter<FishRecord>(getContext(), android.R.layout.simple_list_item_1, mPersonalFishRecordRecordsList) {
             @NonNull
             @Override
             public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -76,10 +74,10 @@ public class RecordsListFragment extends Fragment {
                 //to do  get all information about record
                 TextView mSpeciesName = view.findViewById(R.id.tv_fish_species);
                 TextView mFishLength = view.findViewById(R.id.tv_fish_length);
-                Fish mFishAtPosition = this.getItem(position);
+                FishRecord mFishRecordAtPosition = this.getItem(position);
 
-                String fishSpecies = mFishAtPosition.getSpeciesName();
-                double fishLength = mFishAtPosition.getLength();
+                String fishSpecies = mFishRecordAtPosition.getSpeciesName();
+                double fishLength = mFishRecordAtPosition.getLength();
 
                 mSpeciesName.setText(fishSpecies);
                 mFishLength.setText(new StringBuilder()
@@ -96,19 +94,19 @@ public class RecordsListFragment extends Fragment {
     private void getPersonalRecordsFromDatabase() {
 
         //to do get from firebase
-        mPersonalFishRecordsList.add(new Fish("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordsList.add(new Fish("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordsList.add(new Fish("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordsList.add(new Fish("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordsList.add(new Fish("Carb", "2018", "Bulgaria", 56, 21));
-        mPersonalFishRecordsList.add(new Fish("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordsList.add(new Fish("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordsList.add(new Fish("Trout", "2018", "Bulgaria", 21.3, 0.500));
-        mPersonalFishRecordsList.add(new Fish("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordsList.add(new Fish("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordsList.add(new Fish("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordsList.add(new Fish("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordsList.add(new Fish("Trout", "2018", "Bulgaria", 21.3, 0.300));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Carp", "2018", "Bulgaria", 56, 21));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.500));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
 
     }
 }

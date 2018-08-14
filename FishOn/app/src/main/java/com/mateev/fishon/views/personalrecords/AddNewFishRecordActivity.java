@@ -14,11 +14,11 @@ import com.mateev.fishon.views.drawerbase.DrawerActivity;
 
 public class AddNewFishRecordActivity extends DrawerActivity implements View.OnClickListener {
     private static final String SUCCESSFUL_ADD_OF_FISH_RECORD_MESSAGE = "Your fish record was added successfully!\nCongratulations on the catch!";
-    private static final String INVALID_SPECIES_INPUT_MESSAGE = "You should enter a valid species";
-    private static final String INVALID_COUNTRY_INPUT_MESSAGE = "You should enter a valid country";
-    private static final String INVALID_YEAR_CAUGHT_INPUT_MESSAGE = "You should enter a valid year";
-    private static final String INVALID_WEIGHT_INPUT_MESSAGE = "You should enter a valid weight";
-    private static final String INVALID_LENGTH_INPUT_MESSAGE = "You should enter a valid length";
+    private static final String INVALID_SPECIES_INPUT_MESSAGE = "You should enter a valid species!";
+    private static final String INVALID_COUNTRY_INPUT_MESSAGE = "You should enter a valid country!";
+    private static final String INVALID_YEAR_CAUGHT_INPUT_MESSAGE = "You should enter a valid year!";
+    private static final String INVALID_WEIGHT_INPUT_MESSAGE = "You should enter a valid weight!";
+    private static final String INVALID_LENGTH_INPUT_MESSAGE = "You should enter a valid length!";
     private Toolbar mDrawerToolbar;
     private EditText mSpeciesEditText;
     private EditText mCountryEditText;

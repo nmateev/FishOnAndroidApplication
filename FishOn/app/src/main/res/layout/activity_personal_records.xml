@@ -32,7 +32,7 @@
         android:layout_toEndOf="@+id/tv_personal_record_message"
         android:background="@null"
         android:contentDescription="@string/adding_new_record"
-        android:src="@drawable/ib_add_new_record" />
+        android:src="@drawable/ib_add_new_item" />
 
     <TextView
         android:id="@+id/tv_personal_record_message"

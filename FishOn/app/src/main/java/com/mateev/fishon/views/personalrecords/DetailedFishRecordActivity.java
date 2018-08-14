@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.mateev.fishon.R;
-import com.mateev.fishon.models.Fish;
+import com.mateev.fishon.models.FishRecord;
 
 
 public class DetailedFishRecordActivity extends AppCompatActivity {
@@ -32,9 +32,9 @@ public class DetailedFishRecordActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        Fish clickedFishExtra = (Fish) intent.getSerializableExtra(CLICKED_FISH_EXTRA_KEY);
+        FishRecord clickedFishRecordExtra = (FishRecord) intent.getSerializableExtra(CLICKED_FISH_EXTRA_KEY);
         mCustomView = findViewById(R.id.cv_custom_view);
-        mCustomView.setSpeciesNameToDraw(clickedFishExtra.getSpeciesName());
+        mCustomView.setSpeciesNameToDraw(clickedFishRecordExtra.getSpeciesName());
 
         mFishFieldCountry = findViewById(R.id.tv_fish_country_field);
         mFishFieldYearCaught = findViewById(R.id.tv_fish_year_caught_field);
@@ -52,15 +52,15 @@ public class DetailedFishRecordActivity extends AppCompatActivity {
         mFishInfoLenght = findViewById(R.id.tv_fish_length_info);
 
         mFishInfoCountry
-                .setText(clickedFishExtra.getCountry());
+                .setText(clickedFishRecordExtra.getCountryCaught());
         mFishInfoYearCaught
-                .setText(clickedFishExtra.getYearCaught());
+                .setText(clickedFishRecordExtra.getYearCaught());
         mFishInfoWeight.setText(new StringBuilder()
-                .append(clickedFishExtra.getWeight())
+                .append(clickedFishRecordExtra.getWeight())
                 .append(" kg").toString());
 
         mFishInfoLenght.setText(new StringBuilder()
-                .append(clickedFishExtra.getLength())
+                .append(clickedFishRecordExtra.getLength())
                 .append(" cm").toString());
 
     }

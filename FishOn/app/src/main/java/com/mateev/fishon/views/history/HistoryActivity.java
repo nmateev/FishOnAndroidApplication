@@ -9,12 +9,10 @@ import android.support.v7.widget.Toolbar;
 
 import com.mateev.fishon.R;
 import com.mateev.fishon.views.drawerbase.DrawerActivity;
-import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 
 import android.support.v4.app.FragmentManager;
 
 import java.util.HashMap;
-import java.util.Objects;
 
 public class HistoryActivity extends DrawerActivity {
     private Toolbar mDrawerToolbar;

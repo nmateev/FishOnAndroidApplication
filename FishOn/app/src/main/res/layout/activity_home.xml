@@ -10,26 +10,11 @@
         android:id="@+id/t_drawer_toolbar"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_alignStart="@+id/ll_toolbar_layout"
         android:background="@color/colorAccent" />
-
-    <LinearLayout
-        android:id="@+id/ll_toolbar_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <SearchView
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:queryHint="@string/search_for_places">
-        </SearchView>
-    </LinearLayout>
 
     <FrameLayout
         android:id="@+id/fr_home_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/t_drawer_toolbar"/>
+        android:layout_below="@+id/t_drawer_toolbar" />
 </RelativeLayout>
