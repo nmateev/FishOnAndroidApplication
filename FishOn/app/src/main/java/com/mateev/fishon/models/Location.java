@@ -1,8 +1,8 @@
 package com.mateev.fishon.models;
 
-public class Location {
+public class Location  {
 
-    public String country;
+    public String countryName;
     public String waterBasinName;
     public String waterBasinType;
 
@@ -10,14 +10,14 @@ public class Location {
         // Required empty public constructor
     }
 
-    public Location(String country, String waterBasinName, String waterBasinType) {
-        setCountry(country);
+    public Location(String countryName, String waterBasinName, String waterBasinType) {
+        setCountry(countryName);
         setWaterBasinName(waterBasinName);
         setWaterBasinType(waterBasinType);
     }
 
     public String getCountry() {
-        return country;
+        return countryName;
     }
 
     public String getWaterBasinName() {
@@ -32,8 +32,8 @@ public class Location {
         this.waterBasinName = waterBasinName;
     }
 
-    private void setCountry(String country) {
-        this.country = country;
+    private void setCountry(String countryName) {
+        this.countryName = countryName;
     }
 
     private void setWaterBasinType(String waterBasinType) {

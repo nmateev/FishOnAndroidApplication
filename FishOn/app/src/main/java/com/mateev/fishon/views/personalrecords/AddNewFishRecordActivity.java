@@ -19,6 +19,8 @@ public class AddNewFishRecordActivity extends DrawerActivity implements View.OnC
     private static final String INVALID_YEAR_CAUGHT_INPUT_MESSAGE = "You should enter a valid year!";
     private static final String INVALID_WEIGHT_INPUT_MESSAGE = "You should enter a valid weight!";
     private static final String INVALID_LENGTH_INPUT_MESSAGE = "You should enter a valid length!";
+    private static final float FROM_ALPHA_ANIMATION = 1F;
+    private static final float TO_ALPHA_ANIMATION = 0.3F;
     private Toolbar mDrawerToolbar;
     private EditText mSpeciesEditText;
     private EditText mCountryEditText;
@@ -40,7 +42,7 @@ public class AddNewFishRecordActivity extends DrawerActivity implements View.OnC
         mWeightEditText = findViewById(R.id.et_add_weight_field);
         mLengthEditText = findViewById(R.id.et_add_length_field);
         mAddFishRecordButton = findViewById(R.id.btn_add_fish_record);
-        mButtonClickAnimation = new AlphaAnimation(1F, 0.3F);
+        mButtonClickAnimation = new AlphaAnimation(FROM_ALPHA_ANIMATION, TO_ALPHA_ANIMATION);
 
         mAddFishRecordButton.setOnClickListener(this);
     }
@@ -98,7 +100,8 @@ public class AddNewFishRecordActivity extends DrawerActivity implements View.OnC
     }
 
     @Override
-    protected long getItemIdentification() {
+    protected int getDrawerItemIdentification() {
+        //should not return valid identification
         return -1;
     }
 

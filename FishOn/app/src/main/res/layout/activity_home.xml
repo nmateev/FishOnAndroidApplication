@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,7 +12,10 @@
         android:id="@+id/t_drawer_toolbar"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="@color/colorAccent" />
+        app:title="Home"
+        app:titleMarginStart="@dimen/MediumMargin"
+        android:background="@color/colorAccent"
+        />
 
     <FrameLayout
         android:id="@+id/fr_home_content"

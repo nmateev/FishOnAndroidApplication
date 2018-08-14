@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.mateev.fishon.R;
 
 public class EarlyHistoryFragment extends Fragment implements IdentifiableFragment {
+    private static final String EARLY_HISTORY_TITLE = "EARLY HISTORY";
     private TextView mEarlyHistoryTextView;
     private TextView mEarlyHistoryStartingTextView;
 
@@ -24,7 +25,7 @@ public class EarlyHistoryFragment extends Fragment implements IdentifiableFragme
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_early_history, container, false);
-        mEarlyHistoryStartingTextView= view.findViewById(R.id.tv_history_starting_text_view);
+        mEarlyHistoryStartingTextView = view.findViewById(R.id.tv_history_starting_text_view);
         mEarlyHistoryStartingTextView.setText("Starting information");
         mEarlyHistoryTextView = view.findViewById(R.id.tv_history_text_view);
         mEarlyHistoryTextView.setText("Early information");
@@ -41,8 +42,8 @@ public class EarlyHistoryFragment extends Fragment implements IdentifiableFragme
     }
 
     @Override
-    public String getName() {
-        return "EARLY HISTORY";
+    public String getTitleName() {
+        return EARLY_HISTORY_TITLE;
     }
 
 }

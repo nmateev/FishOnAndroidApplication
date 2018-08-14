@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.mateev.fishon.R;
 
 public class PreHistoryFragment extends Fragment implements IdentifiableFragment {
+    private static final String PRE_HISTORY_TITLE = "PRE";
     private TextView mPreHistoryTextView;
 
     public PreHistoryFragment() {
@@ -34,7 +35,7 @@ public class PreHistoryFragment extends Fragment implements IdentifiableFragment
     }
 
     @Override
-    public String getName() {
-        return "PRE";
+    public String getTitleName() {
+        return PRE_HISTORY_TITLE;
     }
 }

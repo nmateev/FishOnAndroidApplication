@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.mateev.fishon.R;
 
 public class ModernHistoryFragment extends Fragment implements IdentifiableFragment {
+    private static final String MODERN_HISTORY_TITLE = "MODERN";
     private TextView mModernHistoryTextView;
 
     public ModernHistoryFragment() {
@@ -30,8 +31,8 @@ public class ModernHistoryFragment extends Fragment implements IdentifiableFragm
     }
 
     @Override
-    public String getName() {
-        return "MODERN";
+    public String getTitleName() {
+        return MODERN_HISTORY_TITLE;
     }
 
     public static ModernHistoryFragment createNewInstance() {

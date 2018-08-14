@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".views.fishingtypes.FishingTypesActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/t_drawer_toolbar"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="@color/colorAccent" />
+        android:background="@color/colorAccent"
+        app:title="Fishing Types"
+        app:titleMarginStart="@dimen/MediumMargin" />
 
     <LinearLayout
         android:id="@+id/ll_image_buttons"
@@ -29,7 +33,6 @@
                 android:contentDescription="@string/lake_fishing"
                 android:src="@drawable/lakefishing" />
 
-
         </LinearLayout>
 
         <View
@@ -47,7 +50,6 @@
                 style="@style/ImageButtonStyle"
                 android:contentDescription="@string/river_fishing"
                 android:src="@drawable/riverfishing" />
-
 
         </LinearLayout>
 
@@ -68,8 +70,6 @@
                 android:src="@drawable/seafishing" />
         </LinearLayout>
 
-
     </LinearLayout>
-
 
 </RelativeLayout>

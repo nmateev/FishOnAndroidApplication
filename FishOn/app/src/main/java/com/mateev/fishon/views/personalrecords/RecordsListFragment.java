@@ -22,6 +22,7 @@ import java.util.Objects;
 
 public class RecordsListFragment extends Fragment {
     private static String CLICKED_FISH_EXTRA_KEY = "clicked-fish";
+    private static String LENGTH_UNITS = " cm";
     private ListView mPersonalRecordsListView;
     private ArrayAdapter<FishRecord> mPersonalRecordsArrayAdapter;
     private List<FishRecord> mPersonalFishRecordRecordsList;
@@ -71,7 +72,6 @@ public class RecordsListFragment extends Fragment {
                     LayoutInflater inflater = LayoutInflater.from(this.getContext());
                     view = inflater.inflate(R.layout.item_fish_record_view, parent, false);
                 }
-                //to do  get all information about record
                 TextView mSpeciesName = view.findViewById(R.id.tv_fish_species);
                 TextView mFishLength = view.findViewById(R.id.tv_fish_length);
                 FishRecord mFishRecordAtPosition = this.getItem(position);
@@ -82,8 +82,7 @@ public class RecordsListFragment extends Fragment {
                 mSpeciesName.setText(fishSpecies);
                 mFishLength.setText(new StringBuilder()
                         .append(fishLength)
-                        .append(" ")
-                        .append("cm")
+                        .append(LENGTH_UNITS)
                         .toString());
 
                 return view;

@@ -1,11 +1,8 @@
 <resources>
-    <string name="app_name">FishOn</string>
-    <string name="welcome_to_fishon">Welcome to FishOn!</string>
+    <string name="app_name">Fish On</string>
     <string name="start_journey_icon">Click anywhere to start your journey</string>
     <string name="application_start_image">Application start image</string>
-    <string name="search_for_places">Search for places</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fish_me_next_quote">Fish me next quote</string>
     <string name="fishing_quote">Fishing Quote</string>
     <string name="sea_fishing">sea_fishing</string>
@@ -19,6 +16,9 @@
     <string name="adding_new_visited_place">Adding new visited place</string>
     <string name="adding_new_place_to_wish_list">Adding new location to wish list</string>
     <string name="add">ADD</string>
+    <string name="modern_history_image">Modern history image</string>
+    <string name="early_history_image">Early history image</string>
+    <string name="pre_history_image">Pre history image</string>
 
 
     <string-array name="water_basin_types_array">

@@ -15,6 +15,8 @@ public class DetailedFishRecordActivity extends AppCompatActivity {
     private static String YEAR_CAUGHT_FIELD = "Year caught: ";
     private static String WEIGHT_FIELD = "Weight: ";
     private static String LENGTH_FIELD = "Length: ";
+    private static String WEIGHT_UNITS = " kg";
+    private static String LENGTH_UNITS = " cm";
     private TextView mFishFieldCountry;
     private TextView mFishFieldYearCaught;
     private TextView mFishFieldWeight;
@@ -57,11 +59,11 @@ public class DetailedFishRecordActivity extends AppCompatActivity {
                 .setText(clickedFishRecordExtra.getYearCaught());
         mFishInfoWeight.setText(new StringBuilder()
                 .append(clickedFishRecordExtra.getWeight())
-                .append(" kg").toString());
+                .append(WEIGHT_UNITS).toString());
 
         mFishInfoLenght.setText(new StringBuilder()
                 .append(clickedFishRecordExtra.getLength())
-                .append(" cm").toString());
+                .append(LENGTH_UNITS).toString());
 
     }
 }

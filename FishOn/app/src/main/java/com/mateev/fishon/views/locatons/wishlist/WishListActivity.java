@@ -18,6 +18,7 @@ import java.util.ArrayList;
 
 public class WishListActivity extends DrawerActivity implements View.OnClickListener {
     private static final String ADD_NEW_PLACE_TO_WISH_LIST_TIP_MESSAGE = "You can add a new place to your wish list by clicking the plus icon.";
+    public static final int DRAWER_IDENTIFIER = 2;
     private Toolbar mDrawerToolbar;
     private ImageButton mAddLocationToWishListImageButton;
     private AlphaAnimation mImageButtonClickAnimation;
@@ -60,8 +61,8 @@ public class WishListActivity extends DrawerActivity implements View.OnClickList
     }
 
     @Override
-    protected long getItemIdentification() {
-        return 2;
+    protected int getDrawerItemIdentification() {
+        return DRAWER_IDENTIFIER;
     }
 
     private void getWishListPlacesFromDatabase() {

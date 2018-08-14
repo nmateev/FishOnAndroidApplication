@@ -12,6 +12,9 @@ import com.mateev.fishon.R;
 import com.mateev.fishon.views.drawerbase.DrawerActivity;
 
 public class PersonalRecordsActivity extends DrawerActivity implements View.OnClickListener {
+    private static final float FROM_ALPHA_ANIMATION = 1F;
+    private static final float TO_ALPHA_ANIMATION = 0.3F;
+    public static final int DRAWER_IDENTIFIER = 4;
     private Toolbar mDrawerToolbar;
     private ImageButton mAddNewRecordImageButton;
     private AlphaAnimation mImageButtonClickAnimation;
@@ -24,7 +27,7 @@ public class PersonalRecordsActivity extends DrawerActivity implements View.OnCl
         mDrawerToolbar = findViewById(R.id.t_drawer_toolbar);
         mAddNewRecordImageButton = findViewById(R.id.ib_add_new_record);
         mAddNewRecordImageButton.setOnClickListener(this);
-        mImageButtonClickAnimation = new AlphaAnimation(1F, 0.3F);
+        mImageButtonClickAnimation = new AlphaAnimation(FROM_ALPHA_ANIMATION, TO_ALPHA_ANIMATION);
         mRecordsListFragment = RecordsListFragment.createNewInstance();
         getFragmentManager()
                 .beginTransaction()
@@ -41,8 +44,8 @@ public class PersonalRecordsActivity extends DrawerActivity implements View.OnCl
     }
 
     @Override
-    protected long getItemIdentification() {
-        return 4;
+    protected int getDrawerItemIdentification() {
+        return DRAWER_IDENTIFIER;
     }
 
     @Override

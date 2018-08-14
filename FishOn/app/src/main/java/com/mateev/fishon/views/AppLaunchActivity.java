@@ -13,8 +13,13 @@ import com.mateev.fishon.R;
 import com.mateev.fishon.views.home.HomeActivity;
 
 public class AppLaunchActivity extends AppCompatActivity {
+    private static final float FROM_ALPHA_ANIMATION = 1F;
+    private static final float TO_ALPHA_ANIMATION = 0.3F;
+    private static final int ALPHA_ANIMATION_DURATION = 1000;
+
     private ImageView mAppLaunchImage;
     private TextView mClickAnywhereMessage;
+    private AlphaAnimation mAnimatedText;
 
     public AppLaunchActivity() {
         // Required empty public constructor
@@ -26,6 +31,7 @@ public class AppLaunchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_app_launch);
         mAppLaunchImage = findViewById(R.id.iv_app_launch_image);
         mClickAnywhereMessage = findViewById(R.id.tv_click_anywhere_message);
+        mAnimatedText = new AlphaAnimation(FROM_ALPHA_ANIMATION, TO_ALPHA_ANIMATION);
         animateText(mClickAnywhereMessage);
         Context mLaunchActivityContext = this;
 
@@ -44,11 +50,11 @@ public class AppLaunchActivity extends AppCompatActivity {
         finish();
     }
 
-    private static void animateText(TextView textView) {
-        Animation animatedText = new AlphaAnimation(0.0f, 3.0f);
-        animatedText.setDuration(1000);
-        animatedText.setRepeatMode(Animation.REVERSE);
-        animatedText.setRepeatCount(Animation.INFINITE);
-        textView.startAnimation(animatedText);
+    private void animateText(TextView textView) {
+
+        mAnimatedText.setDuration(ALPHA_ANIMATION_DURATION);
+        mAnimatedText.setRepeatMode(Animation.REVERSE);
+        mAnimatedText.setRepeatCount(Animation.INFINITE);
+        textView.startAnimation(mAnimatedText);
     }
 }

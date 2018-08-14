@@ -18,6 +18,9 @@ import java.util.ArrayList;
 
 public class VisitedPlacesActivity extends DrawerActivity implements View.OnClickListener {
     private static final String ADD_NEW_VISITED_PLACE_TIP_MESSAGE = "You can add a new visited place by clicking the plus icon.";
+    public static final int DRAWER_IDENTIFIER = 3;
+    private static final float FROM_ALPHA_ANIMATION = 1F;
+    private static final float TO_ALPHA_ANIMATION = 0.3F;
     private Toolbar mDrawerToolbar;
     private ImageButton mAddVisitedPlaceImageButton;
     private AlphaAnimation mImageButtonClickAnimation;
@@ -30,7 +33,7 @@ public class VisitedPlacesActivity extends DrawerActivity implements View.OnClic
         setContentView(R.layout.activity_visited_places);
         mDrawerToolbar = findViewById(R.id.t_drawer_toolbar);
         mAddVisitedPlaceImageButton = findViewById(R.id.ib_add_new_visited_place);
-        mImageButtonClickAnimation = new AlphaAnimation(1F, 0.3F);
+        mImageButtonClickAnimation = new AlphaAnimation(FROM_ALPHA_ANIMATION, TO_ALPHA_ANIMATION);
         mAddVisitedPlaceImageButton.setOnClickListener(this);
 
         mVisitedLocationsList = new ArrayList<>();
@@ -66,8 +69,8 @@ public class VisitedPlacesActivity extends DrawerActivity implements View.OnClic
 
 
     @Override
-    protected long getItemIdentification() {
-        return 3;
+    protected int getDrawerItemIdentification() {
+        return DRAWER_IDENTIFIER;
     }
 
 

@@ -9,6 +9,9 @@ import com.mateev.fishon.R;
 import com.mateev.fishon.views.drawerbase.DrawerActivity;
 
 public class FishingTypeInformationActivity extends DrawerActivity {
+    private static String INFORMATION_TYPE_KEY = "type-information";
+    private static String TOOLBAR_TITLE_KEY = "toolbar-title";
+    private static int TOOLBAR_TITLE_MARGIN = 20;
     private Toolbar mDrawerToolbar;
     private TextView mFishingInformationTextView;
 
@@ -20,7 +23,10 @@ public class FishingTypeInformationActivity extends DrawerActivity {
         mFishingInformationTextView = findViewById(R.id.tv_fishing_type_information);
 
         Intent intent = getIntent();
-        String informationExtra = intent.getStringExtra("type-information");
+        String informationExtra = intent.getStringExtra(INFORMATION_TYPE_KEY);
+        String toolbarTitle = intent.getStringExtra(TOOLBAR_TITLE_KEY);
+        mDrawerToolbar.setTitle(toolbarTitle);
+        mDrawerToolbar.setTitleMarginStart(TOOLBAR_TITLE_MARGIN);
         mFishingInformationTextView.setText(informationExtra);
 
     }
@@ -31,7 +37,7 @@ public class FishingTypeInformationActivity extends DrawerActivity {
     }
 
     @Override
-    protected long getItemIdentification() {
+    protected int getDrawerItemIdentification() {
         //should not return valid identification
         return -1;
 

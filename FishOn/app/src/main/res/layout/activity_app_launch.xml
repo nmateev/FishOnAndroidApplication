@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,16 +14,6 @@
         android:scaleType="fitXY"
         android:src="@drawable/applaunchpicture" />
 
-    <TextView
-        android:id="@+id/tv_welcome_message"
-        style="@style/BigBoldTextSerif"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:paddingTop="@dimen/SmallPadding"
-        android:text="@string/welcome_to_fishon" />
 
     <TextView
         android:id="@+id/tv_click_anywhere_message"
@@ -32,7 +23,6 @@
         android:layout_centerHorizontal="true"
         android:paddingBottom="5dp"
         android:text="@string/start_journey_icon"
-        android:textColor="@color/colorAccent"
         android:textSize="@dimen/MediumText" />
 
 

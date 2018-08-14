@@ -10,18 +10,29 @@ import android.util.AttributeSet;
 import android.view.View;
 
 public class CustomView extends View {
+    private static int PAINTER_COLOR_RED = 234;
+    private static int PAINTER_COLOR_GREEN = 79;
+    private static int PAINTER_COLOR_BLUE = 45;
+    private static int PAINTER_TEXT_SIZE = 150;
+    private static int PAINTER_STROKE_WIDTH = 6;
+    private static int CANVAS_START_X = 350;
+    private static int CANVAS_START_Y = 500;
+    private static int RECT_START = 150;
+    private static int RECT_END_X = 800;
+    private static int RECT_END_Y = 600;
+    private static int DEFAULT_STYLE = 0;
     private Paint mPainter = new Paint();
     private Rect mRect;
     private String mSpeciesNameToDraw;
 
     public CustomView(Context context) {
         super(context);
-        init(null, 0);
+        init(null, DEFAULT_STYLE);
     }
 
     public CustomView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        init(attrs, 0);
+        init(attrs, DEFAULT_STYLE);
     }
 
     public CustomView(Context context, @Nullable AttributeSet attrs, int defStyle) {
@@ -38,8 +49,8 @@ public class CustomView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         canvas.drawRect(mRect, mPainter);
-        mPainter.setTextSize(150);
-        canvas.drawText(mSpeciesNameToDraw, 350, 500, mPainter);
+        mPainter.setTextSize(PAINTER_TEXT_SIZE);
+        canvas.drawText(mSpeciesNameToDraw, CANVAS_START_X, CANVAS_START_Y, mPainter);
     }
 
     void setSpeciesNameToDraw(String speciesName) {
@@ -48,15 +59,15 @@ public class CustomView extends View {
 
     private void init(AttributeSet set, int defStyle) {
 
-        mPainter.setColor(Color.rgb(234, 79, 45));
+        mPainter.setColor(Color.rgb(PAINTER_COLOR_RED, PAINTER_COLOR_GREEN, PAINTER_COLOR_BLUE));
         mPainter.setAntiAlias(true);
         mPainter.setStyle(Paint.Style.STROKE);
-        mPainter.setStrokeWidth(6);
+        mPainter.setStrokeWidth(PAINTER_STROKE_WIDTH);
         mRect = new Rect();
-        mRect.left = 150;
-        mRect.top = 150;
-        mRect.right = (mRect.left + 800);
-        mRect.bottom = (mRect.top + 600);
+        mRect.left = RECT_START;
+        mRect.top = RECT_START;
+        mRect.right = (mRect.left + RECT_END_X);
+        mRect.bottom = (mRect.top + RECT_END_Y);
 
     }
 }

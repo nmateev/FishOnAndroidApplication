@@ -3,16 +3,15 @@ package com.mateev.fishon.views.drawerbase;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
 import com.mateev.fishon.R;
 import com.mateev.fishon.views.about.AboutActivity;
 import com.mateev.fishon.views.fishingtypes.FishingTypesActivity;
 import com.mateev.fishon.views.history.HistoryActivity;
 import com.mateev.fishon.views.home.HomeActivity;
+import com.mateev.fishon.views.locatons.visitedplaces.VisitedPlacesActivity;
 import com.mateev.fishon.views.locatons.wishlist.WishListActivity;
 import com.mateev.fishon.views.personalrecords.PersonalRecordsActivity;
-import com.mateev.fishon.views.locatons.visitedplaces.VisitedPlacesActivity;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
@@ -21,9 +20,17 @@ import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
+
+import java.util.Objects;
 
 public abstract class DrawerActivity extends AppCompatActivity {
+    private static String HOME_DRAWER_ITEM_NAME = "Home";
+    private static String WISH_LIST_DRAWER_ITEM_NAME = "Wish List";
+    private static String VISITED_PLACES_DRAWER_ITEM_NAME = "Visited Places";
+    private static String PERSONAL_RECORDS_DRAWER_ITEM_NAME = "Personal Records";
+    private static String FISHING_TYPES_DRAWER_ITEM_NAME = "Fishing Types";
+    private static String HISTORY_DRAWER_ITEM_NAME = "History";
+    private static String ABOUT_DRAWER_ITEM_NAME = "About";
     private Drawer mDrawer;
 
     private void setupDrawer() {
@@ -35,27 +42,27 @@ public abstract class DrawerActivity extends AppCompatActivity {
                 .withCompactStyle(true)
                 .build();
 
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem()
-                .withIdentifier(1)
-                .withName("Home");
-        SecondaryDrawerItem item2 = new SecondaryDrawerItem()
-                .withIdentifier(2)
-                .withName("Wish list");
-        SecondaryDrawerItem item3 = new SecondaryDrawerItem()
-                .withIdentifier(3)
-                .withName("Visited places");
-        SecondaryDrawerItem item4 = new SecondaryDrawerItem()
-                .withIdentifier(4)
-                .withName("Personal records");
-        SecondaryDrawerItem item5 = new SecondaryDrawerItem()
-                .withIdentifier(5)
-                .withName("Fishing types");
-        SecondaryDrawerItem item6 = new SecondaryDrawerItem()
-                .withIdentifier(6)
-                .withName("History");
-        SecondaryDrawerItem item7 = new SecondaryDrawerItem()
-                .withIdentifier(7)
-                .withName("About");
+        PrimaryDrawerItem homeDrawerItem = new PrimaryDrawerItem()
+                .withIdentifier(HomeActivity.DRAWER_IDENTIFIER)
+                .withName(HOME_DRAWER_ITEM_NAME);
+        SecondaryDrawerItem wishListDrawerItem = new SecondaryDrawerItem()
+                .withIdentifier(WishListActivity.DRAWER_IDENTIFIER)
+                .withName(WISH_LIST_DRAWER_ITEM_NAME);
+        SecondaryDrawerItem visitedPlacesDrawerItem = new SecondaryDrawerItem()
+                .withIdentifier(VisitedPlacesActivity.DRAWER_IDENTIFIER)
+                .withName(VISITED_PLACES_DRAWER_ITEM_NAME);
+        SecondaryDrawerItem personalRecordsDrawerItem = new SecondaryDrawerItem()
+                .withIdentifier(PersonalRecordsActivity.DRAWER_IDENTIFIER)
+                .withName(PERSONAL_RECORDS_DRAWER_ITEM_NAME);
+        SecondaryDrawerItem fishingTypesDrawerItem = new SecondaryDrawerItem()
+                .withIdentifier(FishingTypesActivity.DRAWER_IDENTIFIER)
+                .withName(FISHING_TYPES_DRAWER_ITEM_NAME);
+        SecondaryDrawerItem historyDrawerItem = new SecondaryDrawerItem()
+                .withIdentifier(HistoryActivity.DRAWER_IDENTIFIER)
+                .withName(HISTORY_DRAWER_ITEM_NAME);
+        SecondaryDrawerItem aboutDrawerItem = new SecondaryDrawerItem()
+                .withIdentifier(AboutActivity.DRAWER_IDENTIFIER)
+                .withName(ABOUT_DRAWER_ITEM_NAME);
 
 
         mDrawer = new DrawerBuilder()
@@ -65,55 +72,73 @@ public abstract class DrawerActivity extends AppCompatActivity {
                 .withTranslucentStatusBar(false)
                 .withAccountHeader(header)
                 .addDrawerItems(
-                        item1.withIcon(GoogleMaterial.Icon.gmd_home),
+                        homeDrawerItem
+                                .withIcon(GoogleMaterial.Icon.gmd_home),
                         new DividerDrawerItem(),
-                        item2.withIcon(R.drawable.drawerwishlisticon),
+                        wishListDrawerItem
+                                .withIcon(R.drawable.drawerwishlisticon),
                         new DividerDrawerItem(),
-                        item3.withIcon(R.drawable.drawervisitedplaces),
+                        visitedPlacesDrawerItem
+                                .withIcon(R.drawable.drawervisitedplaces),
                         new DividerDrawerItem(),
-                        item4.withIcon(R.drawable.drawerpersonalrecordsicon),
+                        personalRecordsDrawerItem
+                                .withIcon(R.drawable.drawerpersonalrecordsicon),
                         new DividerDrawerItem(),
-                        item5.withIcon(R.drawable.drawerfishingtypesicon),
+                        fishingTypesDrawerItem
+                                .withIcon(R.drawable.drawerfishingtypesicon),
                         new DividerDrawerItem(),
-                        item6.withIcon(R.drawable.drawerhistoryicon),
+                        historyDrawerItem
+                                .withIcon(R.drawable.drawerhistoryicon),
                         new DividerDrawerItem(),
-                        item7.withIcon(GoogleMaterial.Icon.gmd_info)
+                        aboutDrawerItem
+                                .withIcon(GoogleMaterial.Icon.gmd_info)
                 )
-                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
-                    @Override
-                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                        long mDrawerPosition = drawerItem.getIdentifier();
-                        if (mDrawerPosition == 6) {
-                            Intent intent = new Intent(DrawerActivity.this, HistoryActivity.class);
-                            startActivity(intent);
-                        } else if (mDrawerPosition == 7) {
-                            Intent intent = new Intent(DrawerActivity.this, AboutActivity.class);
-                            startActivity(intent);
-                        } else if (mDrawerPosition == 1) {
-                            Intent intent = new Intent(DrawerActivity.this, HomeActivity.class);
-                            startActivity(intent);
-                        } else if (mDrawerPosition == 5) {
-                            Intent intent = new Intent(DrawerActivity.this, FishingTypesActivity.class);
-                            startActivity(intent);
-                        } else if (mDrawerPosition == 4) {
-                            Intent intent = new Intent(DrawerActivity.this, PersonalRecordsActivity.class);
-                            startActivity(intent);
-                        }else if (mDrawerPosition == 3) {
-                            Intent intent = new Intent(DrawerActivity.this, VisitedPlacesActivity.class);
-                            startActivity(intent);
-                        }else if (mDrawerPosition == 2) {
-                            Intent intent = new Intent(DrawerActivity.this, WishListActivity.class);
-                            startActivity(intent);
-                        }
-                        return true;
+                .withOnDrawerItemClickListener((view, position, drawerItem) -> {
+
+                    int clickedDrawerItemPosition = (int) drawerItem.getIdentifier();
+
+                    if (clickedDrawerItemPosition == getDrawerItemIdentification()) {
+                        mDrawer.closeDrawer();
+                        return false;
                     }
+                    Intent intent = null;
+                    switch (clickedDrawerItemPosition) {
+                        case HomeActivity.DRAWER_IDENTIFIER:
+                            intent = new Intent(DrawerActivity.this, HomeActivity.class);
+                            break;
+                        case WishListActivity.DRAWER_IDENTIFIER:
+                            intent = new Intent(DrawerActivity.this, WishListActivity.class);
+                            break;
+                        case VisitedPlacesActivity.DRAWER_IDENTIFIER:
+                            intent = new Intent(DrawerActivity.this, VisitedPlacesActivity.class);
+                            break;
+                        case PersonalRecordsActivity.DRAWER_IDENTIFIER:
+                            intent = new Intent(DrawerActivity.this, PersonalRecordsActivity.class);
+                            break;
+                        case FishingTypesActivity.DRAWER_IDENTIFIER:
+                            intent = new Intent(DrawerActivity.this, FishingTypesActivity.class);
+                            break;
+                        case HistoryActivity.DRAWER_IDENTIFIER:
+                            intent = new Intent(DrawerActivity.this, HistoryActivity.class);
+                            break;
+                        case AboutActivity.DRAWER_IDENTIFIER:
+                            intent = new Intent(DrawerActivity.this, AboutActivity.class);
+                            break;
+
+                    }
+                    if (Objects.equals(intent, null)) {
+                        return false;
+                    }
+
+                    startActivity(intent);
+                    return true;
                 })
                 .build();
     }
 
     protected abstract Toolbar getDrawerToolbar();
 
-    protected abstract long getItemIdentification();
+    protected abstract int getDrawerItemIdentification();
 
     @Override
     protected void onStart() {

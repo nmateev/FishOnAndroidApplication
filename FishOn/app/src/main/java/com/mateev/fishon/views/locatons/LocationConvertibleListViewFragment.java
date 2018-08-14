@@ -67,18 +67,27 @@ public class LocationConvertibleListViewFragment extends Fragment {
                     view = inflater.inflate(R.layout.item_location_view, parent, false);
                 }
                 //to do  get all information about record
-                TextView mCountryName = view.findViewById(R.id.tv_country);
+                TextView mCountryName = Objects
+                        .requireNonNull(view)
+                        .findViewById(R.id.tv_country_name);
                 TextView mWaterBasinName = view.findViewById(R.id.tv_water_basin_name);
                 TextView mWaterBasinType = view.findViewById(R.id.tv_water_basin_type);
                 Location mLocationAtPosition = this.getItem(position);
 
-                String countryName = mLocationAtPosition.getCountry();
-                String waterBasinName = mLocationAtPosition.getWaterBasinName();
-                String waterBasinType = mLocationAtPosition.getWaterBasinType();
+                String countryName = Objects
+                        .requireNonNull(mLocationAtPosition)
+                        .getCountry();
+                String waterBasinName = mLocationAtPosition
+                        .getWaterBasinName();
+                String waterBasinType = mLocationAtPosition
+                        .getWaterBasinType();
 
-                mCountryName.setText(countryName);
-                mWaterBasinName.setText(waterBasinName);
-                mWaterBasinType.setText(waterBasinType);
+                mCountryName
+                        .setText(countryName);
+                mWaterBasinName
+                        .setText(waterBasinName);
+                mWaterBasinType
+                        .setText(waterBasinType);
 
                 return view;
             }

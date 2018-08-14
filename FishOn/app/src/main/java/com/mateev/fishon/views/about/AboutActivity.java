@@ -8,6 +8,8 @@ import com.mateev.fishon.R;
 import com.mateev.fishon.views.drawerbase.DrawerActivity;
 
 public class AboutActivity extends DrawerActivity {
+
+    public static final int DRAWER_IDENTIFIER = 7;
     private TextView mAboutTextView;
     private Toolbar mDrawerToolbar;
 
@@ -28,7 +30,7 @@ public class AboutActivity extends DrawerActivity {
     }
 
     @Override
-    protected long getItemIdentification() {
-        return 7;
+    protected int getDrawerItemIdentification() {
+        return DRAWER_IDENTIFIER;
     }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,17 +20,18 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/iv_early_history_picture"
+                android:id="@+id/iv_modern_history_picture"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="fitXY"
-                android:src="@drawable/modernhistory" />
+                android:src="@drawable/modernhistory"
+                android:contentDescription="@string/modern_history_image" />
 
             <TextView
                 android:id="@+id/tv_history_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/iv_early_history_picture"
+                android:layout_below="@+id/iv_modern_history_picture"
                 android:paddingBottom="@dimen/BigPadding"
                 android:paddingEnd="@dimen/SmallPadding"
                 android:paddingStart="@dimen/SmallPadding"

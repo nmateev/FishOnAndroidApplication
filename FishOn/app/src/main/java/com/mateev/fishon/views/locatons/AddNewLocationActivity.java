@@ -20,6 +20,9 @@ public class AddNewLocationActivity extends DrawerActivity implements AdapterVie
     private static final String INVALID_COUNTRY_INPUT_MESSAGE = "You should enter a valid country!";
     private static final String INVALID_WATER_BASIN_NAME_INPUT_MESSAGE = "You should enter a valid water basin name!";
     private static final String SUCCESSFUL_ADD_OF_NEW_LOCATION_MESSAGE = "You have successfully added this location!";
+    private static final float FROM_ALPHA_ANIMATION = 1F;
+    private static final float TO_ALPHA_ANIMATION = 0.3F;
+    private static final int DEFAULT_SPINNER_SELECTED_ITEM = 0;
     private Toolbar mDrawerToolbar;
     private EditText mCountryEditText;
     private EditText mWaterBasinNameEditText;
@@ -42,7 +45,7 @@ public class AddNewLocationActivity extends DrawerActivity implements AdapterVie
         mAddNewLocationButton = findViewById(R.id.btn_add_new_location);
         mAddNewLocationButton.setOnClickListener(this);
         mInputValidator = new InputValidator();
-        mButtonClickAnimation = new AlphaAnimation(1F, 0.3F);
+        mButtonClickAnimation = new AlphaAnimation(FROM_ALPHA_ANIMATION, TO_ALPHA_ANIMATION);
 
         mWaterBasinTypeAdapter = ArrayAdapter
                 .createFromResource(this, R.array.water_basin_types_array, R.layout.spinner_text_view_item);
@@ -87,12 +90,18 @@ public class AddNewLocationActivity extends DrawerActivity implements AdapterVie
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        mWaterBasinSelection = parent.getAdapter().getItem(position).toString();
+        mWaterBasinSelection = parent
+                .getAdapter()
+                .getItem(position)
+                .toString();
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
-        mWaterBasinSelection = parent.getAdapter().getItem(0).toString();
+        mWaterBasinSelection = parent
+                .getAdapter()
+                .getItem(DEFAULT_SPINNER_SELECTED_ITEM)
+                .toString();
     }
 
     @Override
@@ -101,7 +110,8 @@ public class AddNewLocationActivity extends DrawerActivity implements AdapterVie
     }
 
     @Override
-    protected long getItemIdentification() {
+    protected int getDrawerItemIdentification() {
+        //should not return valid identification
         return -1;
     }
 
