@@ -19,6 +19,8 @@
     <string name="modern_history_image">Modern history image</string>
     <string name="early_history_image">Early history image</string>
     <string name="pre_history_image">Pre history image</string>
+    <string name="about_picture">About picture</string>
+    <string name="sound">Sound</string>
 
 
     <string-array name="water_basin_types_array">

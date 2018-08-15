@@ -3,6 +3,8 @@ package com.mateev.fishon.views.locatons.visitedplaces;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.ImageButton;
@@ -77,35 +79,22 @@ public class VisitedPlacesActivity extends DrawerActivity implements View.OnClic
     private void getVisitedPlacesFromDatabase() {
 
         mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
-        mVisitedLocationsList.add(new Location("Bulgaria", "Danube", "River"));
+        mVisitedLocationsList.add(new Location("UK", "Meon", "River"));
+        mVisitedLocationsList.add(new Location("Bulgaria", "Veleka", "River"));
+        mVisitedLocationsList.add(new Location("Bulgaria", "Vucha", "River"));
+        mVisitedLocationsList.add(new Location("Bulgaria", "Black Sea", "Sea"));
+        mVisitedLocationsList.add(new Location("Canada", "Great bear lake", "Lake"));
+        mVisitedLocationsList.add(new Location("Bulgaria", "Zlatna Panega", "River"));
+        mVisitedLocationsList.add(new Location("Bulgaria", "Batuliiska", "River"));
+        mVisitedLocationsList.add(new Location("Russia", "Baikal", "Lake"));
+        mVisitedLocationsList.add(new Location("Bulgaria", "Struma", "River"));
+        mVisitedLocationsList.add(new Location("Bulgaria", "Lom", "River"));
+        mVisitedLocationsList.add(new Location("Bulgaria", "Eleshnitsa", "River"));
+        mVisitedLocationsList.add(new Location("Bulgaria", "Bqla reka", "River"));
+        mVisitedLocationsList.add(new Location("U.S", "Table Rock Lake", "Lake"));
+        mVisitedLocationsList.add(new Location("Bulgaria", "Belitsa", "River"));
+        mVisitedLocationsList.add(new Location("Bulgaria", "Breznishka", "River"));
+
 
     }
 }

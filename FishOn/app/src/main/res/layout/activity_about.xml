@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".views.about.AboutActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/t_drawer_toolbar"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        app:title="About"
-        app:titleMarginStart="@dimen/MediumMargin"
         android:background="@color/colorAccent"
-        />
+        app:title="About"
+        app:titleMarginStart="@dimen/MediumMargin" />
+
 
     <ScrollView
         android:id="@+id/sv_scroll_view"
@@ -24,25 +23,53 @@
         android:scrollbarFadeDuration="450"
         android:scrollbarSize="5dip"
         android:scrollbarThumbVertical="@color/colorAccent">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageView
                 android:id="@+id/iv_about_picture"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:contentDescription="@string/about_picture"
                 android:scaleType="fitXY"
                 android:src="@drawable/aboutpicture" />
+
+            <TextView
+                android:id="@+id/tv_hint_for_switch_river_sound_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_about_picture"
+                android:layout_toStartOf="@+id/sw_switch_river_sound_on_of"
+                android:paddingBottom="@dimen/SmallPadding"
+                android:paddingEnd="@dimen/SmallPadding"
+                android:paddingStart="@dimen/SmallPadding"
+                android:paddingTop="@dimen/SmallPadding"
+                android:text="@string/sound"
+                android:textColor="@color/colorAccent"/>
+
+            <Switch
+                android:id="@+id/sw_switch_river_sound_on_of"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/iv_about_picture"
+                android:checked="true"
+                android:paddingBottom="@dimen/SmallPadding"
+                android:paddingEnd="@dimen/SmallPadding"
+                android:paddingStart="@dimen/SmallPadding"
+                android:paddingTop="@dimen/SmallPadding" />
 
             <TextView
                 android:id="@+id/tv_about_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/MediumPadding"
+                android:layout_below="@+id/sw_switch_river_sound_on_of"
                 android:paddingBottom="@dimen/MediumPadding"
-                android:paddingStart="@dimen/SmallPadding"
                 android:paddingEnd="@dimen/SmallPadding"
-                android:layout_below="@+id/iv_about_picture"
+                android:paddingStart="@dimen/SmallPadding"
+                android:paddingTop="@dimen/MediumPadding"
                 android:scrollbars="vertical" />
 
         </RelativeLayout>

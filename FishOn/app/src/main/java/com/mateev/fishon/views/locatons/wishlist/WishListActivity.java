@@ -67,26 +67,14 @@ public class WishListActivity extends DrawerActivity implements View.OnClickList
 
     private void getWishListPlacesFromDatabase() {
 
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Black sea", "Sea"));
+        mWishListLocations.add(new Location("Russia", "Umba", "River"));
+        mWishListLocations.add(new Location("Ireland", "Lough Currane", "Lake"));
+        mWishListLocations.add(new Location("Bulgaria", "Tundja", "River"));
+        mWishListLocations.add(new Location("Slovenia", "Sava Bohinjka", "River"));
+        mWishListLocations.add(new Location("England", "Chalk Streams", "River"));
+        mWishListLocations.add(new Location("Bulgaria", "Iskar", "River"));
+        mWishListLocations.add(new Location("Venezuela", "La Guaira", "Sea"));
+        mWishListLocations.add(new Location("Bulgaria", "Ogosta", "River"));
+
     }
 }

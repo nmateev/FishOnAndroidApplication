@@ -93,19 +93,15 @@ public class RecordsListFragment extends Fragment {
     private void getPersonalRecordsFromDatabase() {
 
         //to do get from firebase
-        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordRecordsList.add(new FishRecord("Carp", "2018", "Bulgaria", 56, 21));
-        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.500));
-        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
-        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2018", "Bulgaria", 21.3, 0.300));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Trout", "2017", "Bulgaria", 30.2, 0.450));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Barbus", "2018", "Bulgaria", 26.3, 0.220));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Bleak", "2011", "Bulgaria", 15, 0.050));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Carp", "2013", "Bulgaria", 56, 6.724));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Perch", "2018", "Bulgaria", 20.1, 0.100));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Salmon", "2015", "Russia", 48, 2.860));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Dace", "2016", "Bulgaria", 28.9, 0.390));
+        mPersonalFishRecordRecordsList.add(new FishRecord("Catfish", "2014", "Bulgaria", 112.5, 92.900));
+
 
     }
 }

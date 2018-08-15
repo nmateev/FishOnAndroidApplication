@@ -20,7 +20,15 @@ android {
         targetCompatibility 1.8
         sourceCompatibility 1.8
     }
+    sourceSets {
+        main {
+
+            assets.srcDirs = ['/res/raw']
+
+        }
+    }
 }
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -35,6 +43,7 @@ dependencies {
     implementation("com.mikepenz:materialdrawer:6.0.9@aar") {
         transitive = true
     }
+
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
