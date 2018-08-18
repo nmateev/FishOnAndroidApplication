@@ -23,10 +23,10 @@
                 android:id="@+id/tv_history_starting_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/BigPadding"
+                android:paddingBottom="@dimen/MediumPadding"
                 android:paddingEnd="@dimen/SmallPadding"
                 android:paddingStart="@dimen/SmallPadding"
-                android:paddingTop="@dimen/BigPadding" />
+                android:paddingTop="@dimen/MediumPadding" />
             <ImageView
                 android:id="@+id/iv_early_history_picture"
                 android:layout_width="match_parent"
@@ -41,10 +41,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/iv_early_history_picture"
-                android:paddingBottom="@dimen/BigPadding"
+                android:paddingBottom="@dimen/MediumPadding"
                 android:paddingEnd="@dimen/SmallPadding"
                 android:paddingStart="@dimen/SmallPadding"
-                android:paddingTop="@dimen/BigPadding" />
+                android:paddingTop="@dimen/MediumPadding" />
         </RelativeLayout>
 
     </ScrollView>

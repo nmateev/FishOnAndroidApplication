@@ -8,7 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.mateev.fishon.FishOnApp;
 import com.mateev.fishon.R;
+import com.mateev.fishon.models.FishRecord;
+import com.mateev.fishon.repository.RepositoryBase;
 import com.mateev.fishon.utilities.FishRecordInputValidator;
 import com.mateev.fishon.views.drawerbase.DrawerActivity;
 
@@ -29,12 +32,16 @@ public class AddNewFishRecordActivity extends DrawerActivity implements View.OnC
     private EditText mLengthEditText;
     private Button mAddFishRecordButton;
     private AlphaAnimation mButtonClickAnimation;
-    private FishRecordInputValidator mValidator = new FishRecordInputValidator();
+    private FishRecordInputValidator mValidator;
+    private RepositoryBase<FishRecord> mFishRecordRepository;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_fish_record);
+
+        mValidator = new FishRecordInputValidator();
+        mFishRecordRepository = FishOnApp.getFishRecordsRepository();
         mDrawerToolbar = findViewById(R.id.t_drawer_toolbar);
         mSpeciesEditText = findViewById(R.id.et_add_fish_species_field);
         mCountryEditText = findViewById(R.id.et_add_country_caught__field);
@@ -49,47 +56,57 @@ public class AddNewFishRecordActivity extends DrawerActivity implements View.OnC
 
     @Override
     public void onClick(View view) {
-        boolean isInputDataCorrect = true;
+
         view.startAnimation(mButtonClickAnimation);
+
+        boolean isUserInputDataCorrect = true;
+
         String speciesInput = mSpeciesEditText.getText().toString();
         if (!mValidator.isStringValid(speciesInput)) {
-            isInputDataCorrect = false;
+            isUserInputDataCorrect = false;
             Toast.makeText(this, INVALID_SPECIES_INPUT_MESSAGE, Toast.LENGTH_SHORT)
                     .show();
         }
         String countryInput = mCountryEditText.getText().toString();
         if (!mValidator.isStringValid(countryInput)) {
-            isInputDataCorrect = false;
+            isUserInputDataCorrect = false;
             Toast.makeText(this, INVALID_COUNTRY_INPUT_MESSAGE, Toast.LENGTH_SHORT)
                     .show();
         }
-        String yearCaught = mYearCaughtEditText.getText().toString();
-        if (!mValidator.isInputYearValid(yearCaught)) {
-            isInputDataCorrect = false;
+        String yearCaughtInput = mYearCaughtEditText.getText().toString();
+        if (!mValidator.isInputYearValid(yearCaughtInput)) {
+            isUserInputDataCorrect = false;
             Toast.makeText(this, INVALID_YEAR_CAUGHT_INPUT_MESSAGE, Toast.LENGTH_SHORT)
                     .show();
         }
-        String weight = mWeightEditText.getText().toString();
+        String weightInput = mWeightEditText.getText().toString();
 
-        if (!mValidator.isDecimalNumberValid(weight)) {
-            isInputDataCorrect = false;
+        if (!mValidator.isDecimalNumberValid(weightInput)) {
+            isUserInputDataCorrect = false;
             Toast.makeText(this, INVALID_WEIGHT_INPUT_MESSAGE, Toast.LENGTH_SHORT)
                     .show();
         }
-        String length = mLengthEditText.getText().toString();
-        if (!mValidator.isDecimalNumberValid(length)) {
-            isInputDataCorrect = false;
+        String lengthInput = mLengthEditText.getText().toString();
+        if (!mValidator.isDecimalNumberValid(lengthInput)) {
+            isUserInputDataCorrect = false;
             Toast.makeText(this, INVALID_LENGTH_INPUT_MESSAGE, Toast.LENGTH_SHORT)
                     .show();
         }
 
-        if (isInputDataCorrect) {
+        if (isUserInputDataCorrect) {
+
+            FishRecord newFishRecord = new FishRecord(speciesInput,
+                    yearCaughtInput,
+                    countryInput,
+                    Double.parseDouble(lengthInput),
+                    Double.parseDouble(weightInput));
+
+            mFishRecordRepository.add(newFishRecord);
+
             Toast.makeText(this,
                     SUCCESSFUL_ADD_OF_FISH_RECORD_MESSAGE,
                     Toast.LENGTH_LONG)
                     .show();
-
-            // to do add it to firebase database
         }
 
     }

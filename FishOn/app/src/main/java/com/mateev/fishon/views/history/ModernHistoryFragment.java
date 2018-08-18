@@ -25,7 +25,7 @@ public class ModernHistoryFragment extends Fragment implements IdentifiableFragm
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_modern_history, container, false);
         mModernHistoryTextView = view.findViewById(R.id.tv_history_text_view);
-        mModernHistoryTextView.setText("Modern information");
+        mModernHistoryTextView.setText(getString(R.string.modern_history_information));
 
         return view;
     }

@@ -1,11 +1,10 @@
 package com.mateev.fishon.views.locatons;
 
+import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.app.Fragment;
-import android.view.GestureDetector;
+import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -19,7 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import javax.annotation.Nullable;
 
 public class LocationConvertibleListViewFragment extends Fragment{
 

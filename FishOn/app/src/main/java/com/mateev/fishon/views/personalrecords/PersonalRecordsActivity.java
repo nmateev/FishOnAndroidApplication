@@ -11,6 +11,8 @@ import android.widget.Toast;
 import com.mateev.fishon.R;
 import com.mateev.fishon.views.drawerbase.DrawerActivity;
 
+import java.util.Objects;
+
 public class PersonalRecordsActivity extends DrawerActivity implements View.OnClickListener {
     private static final float FROM_ALPHA_ANIMATION = 1F;
     private static final float TO_ALPHA_ANIMATION = 0.3F;
@@ -20,22 +22,28 @@ public class PersonalRecordsActivity extends DrawerActivity implements View.OnCl
     private AlphaAnimation mImageButtonClickAnimation;
     private RecordsListFragment mRecordsListFragment;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_personal_records);
+
         mDrawerToolbar = findViewById(R.id.t_drawer_toolbar);
         mAddNewRecordImageButton = findViewById(R.id.ib_add_new_record);
         mAddNewRecordImageButton.setOnClickListener(this);
         mImageButtonClickAnimation = new AlphaAnimation(FROM_ALPHA_ANIMATION, TO_ALPHA_ANIMATION);
+
         mRecordsListFragment = RecordsListFragment.createNewInstance();
         getFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fr_personal_records_list, mRecordsListFragment)
                 .commit();
+        if (Objects.equals(savedInstanceState, null)) {
+            Toast.makeText(this, R.string.add_new_record_tip_message, Toast.LENGTH_LONG)
+                    .show();
+        }
 
-        Toast.makeText(this, R.string.add_new_record_tip_message, Toast.LENGTH_LONG)
-                .show();
     }
 
     @Override

@@ -18,6 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/cv_custom_view"
+        android:layout_marginTop="1dp"
         android:layout_marginStart="@dimen/MediumMargin" />
 
     <TextView
@@ -57,6 +58,7 @@
         style="@style/RecordTextViewInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
         android:layout_toEndOf="@+id/tv_fish_weight_field"
         android:layout_below="@+id/tv_fish_year_caught_info"/>
 
@@ -73,6 +75,7 @@
         style="@style/RecordTextViewInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
         android:layout_toEndOf="@+id/tv_fish_length_field"
         android:layout_below="@+id/tv_fish_weight_info"/>
 

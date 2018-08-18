@@ -20,6 +20,7 @@ public class HistoryActivity extends DrawerActivity {
     public static final int EARLY_HISTORY_FRAGMENT_IDENTIFIER = 1;
     public static final int MODERN_HISTORY_FRAGMENT_IDENTIFIER = 2;
     private Toolbar mDrawerToolbar;
+
     private ViewPager mViewPager;
     private ViewPagerAdapter mViewPagerAdapter;
     private TabLayout mTabLayout;

@@ -26,9 +26,9 @@ public class EarlyHistoryFragment extends Fragment implements IdentifiableFragme
 
         View view = inflater.inflate(R.layout.fragment_early_history, container, false);
         mEarlyHistoryStartingTextView = view.findViewById(R.id.tv_history_starting_text_view);
-        mEarlyHistoryStartingTextView.setText("Starting information");
+        mEarlyHistoryStartingTextView.setText(getString(R.string.early_history_starting_information));
         mEarlyHistoryTextView = view.findViewById(R.id.tv_history_text_view);
-        mEarlyHistoryTextView.setText("Early information");
+        mEarlyHistoryTextView.setText(getString(R.string.early_history_next_information));
 
         return view;
     }

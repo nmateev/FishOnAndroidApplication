@@ -1,6 +1,6 @@
 package com.mateev.fishon.models;
 
-public class Location  {
+public abstract class Location  {
 
     public String countryName;
     public String waterBasinName;

@@ -1,15 +1,19 @@
 package com.mateev.fishon.views.personalrecords;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.TextView;
 
 import com.mateev.fishon.R;
 import com.mateev.fishon.models.FishRecord;
+import com.sdsmdg.tastytoast.TastyToast;
 
 
-public class DetailedFishRecordActivity extends AppCompatActivity {
+public class DetailedFishRecordActivity extends AppCompatActivity implements View.OnTouchListener {
+    private static final String ON_CUSTOM_VIEW_TOUCH_MESSAGE = "Brings back memories!";
     private static String CLICKED_FISH_EXTRA_KEY = "clicked-fish";
     private static String COUNTRY_NAME_FIELD = "Country: ";
     private static String YEAR_CAUGHT_FIELD = "Year caught: ";
@@ -64,6 +68,20 @@ public class DetailedFishRecordActivity extends AppCompatActivity {
         mFishInfoLenght.setText(new StringBuilder()
                 .append(clickedFishRecordExtra.getLength())
                 .append(LENGTH_UNITS).toString());
+
+
+        mCustomView.setOnTouchListener(this);
+
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        TastyToast
+                .makeText(this,
+                        ON_CUSTOM_VIEW_TOUCH_MESSAGE,
+                        TastyToast.LENGTH_SHORT,
+                        TastyToast.CONFUSING).show();
+        return true;
 
     }
 }

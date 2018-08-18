@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.mateev.fishon.R;
 import com.mateev.fishon.views.drawerbase.DrawerActivity;
 
+
 public class AboutActivity extends DrawerActivity {
 
     public static final int DRAWER_IDENTIFIER = 7;
@@ -40,7 +41,7 @@ public class AboutActivity extends DrawerActivity {
         });
 
         mAboutTextView = findViewById(R.id.tv_about_text);
-        mAboutTextView.setText("About information");
+        mAboutTextView.setText(R.string.about_activity_information);
     }
 
     @Override

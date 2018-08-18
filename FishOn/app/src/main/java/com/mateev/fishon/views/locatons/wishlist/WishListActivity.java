@@ -8,22 +8,29 @@ import android.view.animation.AlphaAnimation;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.mateev.fishon.FishOnApp;
 import com.mateev.fishon.R;
 import com.mateev.fishon.models.Location;
+import com.mateev.fishon.models.WishListLocation;
+import com.mateev.fishon.repository.RepositoryBase;
 import com.mateev.fishon.views.drawerbase.DrawerActivity;
 import com.mateev.fishon.views.locatons.AddNewLocationActivity;
 import com.mateev.fishon.views.locatons.LocationConvertibleListViewFragment;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class WishListActivity extends DrawerActivity implements View.OnClickListener {
     private static final String ADD_NEW_PLACE_TO_WISH_LIST_TIP_MESSAGE = "You can add a new place to your wish list by clicking the plus icon.";
+    private static final String ADD_LOCATION_LIST_KEY = "list-identifier";
+    private static final String ADD_LOCATION_LIST_VALUE = "wish-list";
     public static final int DRAWER_IDENTIFIER = 2;
     private Toolbar mDrawerToolbar;
     private ImageButton mAddLocationToWishListImageButton;
     private AlphaAnimation mImageButtonClickAnimation;
     private ArrayList<Location> mWishListLocations;
-    LocationConvertibleListViewFragment mWishListLocationsFragment;
+    private LocationConvertibleListViewFragment mWishListLocationsFragment;
+    private RepositoryBase<WishListLocation> mWishListLocationsRepository;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +42,8 @@ public class WishListActivity extends DrawerActivity implements View.OnClickList
         mAddLocationToWishListImageButton.setOnClickListener(this);
 
         mWishListLocations = new ArrayList<>();
+
+        mWishListLocationsRepository = FishOnApp.getWishListLocationsRepository();
         getWishListPlacesFromDatabase();
 
         mWishListLocationsFragment = LocationConvertibleListViewFragment.createNewInstance();
@@ -43,15 +52,17 @@ public class WishListActivity extends DrawerActivity implements View.OnClickList
                 .beginTransaction()
                 .replace(R.id.fr_wish_list_locations_list_view, mWishListLocationsFragment)
                 .commit();
-
-        Toast.makeText(this, ADD_NEW_PLACE_TO_WISH_LIST_TIP_MESSAGE, Toast.LENGTH_LONG)
-                .show();
+        if (Objects.equals(savedInstanceState, null)) {
+            Toast.makeText(this, ADD_NEW_PLACE_TO_WISH_LIST_TIP_MESSAGE, Toast.LENGTH_LONG)
+                    .show();
+        }
     }
 
     @Override
     public void onClick(View view) {
         view.startAnimation(mImageButtonClickAnimation);
         Intent intent = new Intent(this, AddNewLocationActivity.class);
+        intent.putExtra(ADD_LOCATION_LIST_KEY,ADD_LOCATION_LIST_VALUE);
         startActivity(intent);
     }
 
@@ -67,14 +78,23 @@ public class WishListActivity extends DrawerActivity implements View.OnClickList
 
     private void getWishListPlacesFromDatabase() {
 
-        mWishListLocations.add(new Location("Russia", "Umba", "River"));
-        mWishListLocations.add(new Location("Ireland", "Lough Currane", "Lake"));
-        mWishListLocations.add(new Location("Bulgaria", "Tundja", "River"));
-        mWishListLocations.add(new Location("Slovenia", "Sava Bohinjka", "River"));
-        mWishListLocations.add(new Location("England", "Chalk Streams", "River"));
-        mWishListLocations.add(new Location("Bulgaria", "Iskar", "River"));
-        mWishListLocations.add(new Location("Venezuela", "La Guaira", "Sea"));
-        mWishListLocations.add(new Location("Bulgaria", "Ogosta", "River"));
+        mWishListLocationsRepository
+                .getAll(wishListLocations -> {
+                    wishListLocations
+                            .forEach(wishListLocation -> {
+                                mWishListLocations.add(wishListLocation);
+                            });
+                });
+
+       /* mWishListLocations.add(new WishListLocation("Russia", "Umba", "River"));
+        mWishListLocations.add(new WishListLocation("Ireland", "Lough Currane", "Lake"));
+        mWishListLocations.add(new WishListLocation("Bulgaria", "Tundja", "River"));
+        mWishListLocations.add(new WishListLocation("Slovenia", "Sava Bohinjka", "River"));
+        mWishListLocations.add(new WishListLocation("England", "Chalk Streams", "River"));
+        mWishListLocations.add(new WishListLocation("Bulgaria", "Iskar", "River"));
+        mWishListLocations.add(new WishListLocation("Venezuela", "La Guaira", "Sea"));
+        mWishListLocations.add(new WishListLocation("Bulgaria", "Ogosta", "River"));*/
 
     }
+
 }

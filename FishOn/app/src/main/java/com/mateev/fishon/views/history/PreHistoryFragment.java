@@ -25,7 +25,7 @@ public class PreHistoryFragment extends Fragment implements IdentifiableFragment
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_pre_history, container, false);
         mPreHistoryTextView = view.findViewById(R.id.tv_history_text_view);
-        mPreHistoryTextView.setText("Pre information");
+        mPreHistoryTextView.setText(getString(R.string.pre_history_information));
         return view;
 
     }

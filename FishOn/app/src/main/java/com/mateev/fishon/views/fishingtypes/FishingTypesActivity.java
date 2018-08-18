@@ -48,15 +48,15 @@ public class FishingTypesActivity extends DrawerActivity implements View.OnClick
         mTypeInformationIntent = new Intent(FishingTypesActivity.this, FishingTypeInformationActivity.class);
         switch (view.getId()) {
             case R.id.ib_lake_fishing:
-                mFishingInformation = "Information about lake fishing";
+                mFishingInformation = getString(R.string.lake_fishing_information);
                 mToolbarTitle = LAKE_FISHING_TITLE;
                 break;
             case R.id.ib_river_fishing:
-                mFishingInformation = "Information about river fishing";
+                mFishingInformation = getString(R.string.river_fishing_information);
                 mToolbarTitle = RIVER_FISHING_TITLE;
                 break;
             case R.id.ib_sea_fishing:
-                mFishingInformation = "Information about sea fishing";
+                mFishingInformation = getString(R.string.sea_fishing_information);
                 mToolbarTitle = SEA_FISHING_TITLE;
                 break;
         }

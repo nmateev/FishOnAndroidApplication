@@ -29,6 +29,7 @@ public class FishingTypeInformationActivity extends DrawerActivity {
         mDrawerToolbar.setTitleMarginStart(TOOLBAR_TITLE_MARGIN);
         mFishingInformationTextView.setText(informationExtra);
 
+
     }
 
     @Override
