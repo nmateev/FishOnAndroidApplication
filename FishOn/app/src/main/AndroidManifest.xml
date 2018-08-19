@@ -26,11 +26,11 @@
         <activity android:name=".views.about.AboutActivity" />
         <activity android:name=".views.fishingtypes.FishingTypesActivity" />
         <activity android:name=".views.fishingtypes.FishingTypeInformationActivity" />
-        <activity android:name=".views.personalrecords.PersonalRecordsActivity" />
+        <activity android:name=".views.personalrecords.PersonalRecordsActivity" android:screenOrientation="portrait"/>
         <activity android:name=".views.personalrecords.DetailedFishRecordActivity" />
         <activity android:name=".views.personalrecords.AddNewFishRecordActivity" />
-        <activity android:name=".views.locatons.visitedplaces.VisitedPlacesActivity" />
-        <activity android:name=".views.locatons.wishlist.WishListActivity" />
+        <activity android:name=".views.locatons.visitedplaces.VisitedPlacesActivity" android:screenOrientation="portrait" />
+        <activity android:name=".views.locatons.wishlist.WishListActivity" android:screenOrientation="portrait" />
         <activity android:name=".views.locatons.AddNewLocationActivity" />
     </application>
 

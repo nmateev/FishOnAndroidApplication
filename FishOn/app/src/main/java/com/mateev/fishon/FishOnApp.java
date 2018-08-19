@@ -12,40 +12,40 @@ import com.mateev.fishon.repository.RepositoryBase;
 import java.util.Objects;
 
 public class FishOnApp extends Application {
-    private static RepositoryBase<FishRecord> fishRecordsRepository;
-    private static RepositoryBase<WishListLocation> wishListLocationsRepository;
-    private static RepositoryBase<VisitedLocation> visitedLocationsRepository;
-    private static RepositoryBase<Quote> quotesRepository;
+    private static RepositoryBase<FishRecord> sFishRecordsRepository;
+    private static RepositoryBase<WishListLocation> sWishListLocationsRepository;
+    private static RepositoryBase<VisitedLocation> sVisitedLocationsRepository;
+    private static RepositoryBase<Quote> sQuotesRepository;
 
     public static RepositoryBase<FishRecord> getFishRecordsRepository() {
-        if (Objects.equals(fishRecordsRepository, null)) {
+        if (Objects.equals(sFishRecordsRepository, null)) {
 
-            fishRecordsRepository = new FirebaseRepository<>(FishRecord.class);
+            sFishRecordsRepository = new FirebaseRepository<>(FishRecord.class);
         }
-        return fishRecordsRepository;
+        return sFishRecordsRepository;
     }
 
     public static RepositoryBase<WishListLocation> getWishListLocationsRepository() {
-        if (Objects.equals(wishListLocationsRepository, null)) {
+        if (Objects.equals(sWishListLocationsRepository, null)) {
 
-            wishListLocationsRepository = new FirebaseRepository<>(WishListLocation.class);
+            sWishListLocationsRepository = new FirebaseRepository<>(WishListLocation.class);
         }
-        return wishListLocationsRepository;
+        return sWishListLocationsRepository;
     }
 
     public static RepositoryBase<VisitedLocation> getVisitedLocationsRepository() {
-        if (Objects.equals(visitedLocationsRepository, null)) {
+        if (Objects.equals(sVisitedLocationsRepository, null)) {
 
-            visitedLocationsRepository = new FirebaseRepository<>(VisitedLocation.class);
+            sVisitedLocationsRepository = new FirebaseRepository<>(VisitedLocation.class);
         }
-        return visitedLocationsRepository;
+        return sVisitedLocationsRepository;
     }
 
     public static RepositoryBase<Quote> getQuotesRepository() {
-        if (Objects.equals(quotesRepository, null)) {
+        if (Objects.equals(sQuotesRepository, null)) {
 
-            quotesRepository = new FirebaseRepository<>(Quote.class);
+            sQuotesRepository = new FirebaseRepository<>(Quote.class);
         }
-        return quotesRepository;
+        return sQuotesRepository;
     }
 }

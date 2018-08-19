@@ -10,17 +10,17 @@ import android.util.AttributeSet;
 import android.view.View;
 
 public class CustomView extends View {
-    private static int PAINTER_COLOR_RED = 234;
-    private static int PAINTER_COLOR_GREEN = 79;
-    private static int PAINTER_COLOR_BLUE = 45;
-    private static int PAINTER_TEXT_SIZE = 150;
-    private static int PAINTER_STROKE_WIDTH = 6;
-    private static int CANVAS_START_X = 350;
-    private static int CANVAS_START_Y = 500;
-    private static int RECT_START = 150;
-    private static int RECT_END_X = 800;
-    private static int RECT_END_Y = 600;
-    private static int DEFAULT_STYLE = 0;
+    private static final int PAINTER_COLOR_RED = 234;
+    private static final int PAINTER_COLOR_GREEN = 79;
+    private static final int PAINTER_COLOR_BLUE = 45;
+    private static final int PAINTER_TEXT_SIZE = 150;
+    private static final int PAINTER_STROKE_WIDTH = 6;
+    private static final int CANVAS_START_X = 350;
+    private static final int CANVAS_START_Y = 500;
+    private static final int RECT_START = 150;
+    private static final int RECT_END_X = 800;
+    private static final int RECT_END_Y = 600;
+    private static final int DEFAULT_STYLE = 0;
     private Paint mPainter = new Paint();
     private Rect mRect;
     private String mSpeciesNameToDraw;

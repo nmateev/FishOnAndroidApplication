@@ -23,11 +23,11 @@ import java.util.List;
 import java.util.Objects;
 
 public class RecordsListFragment extends Fragment {
-    private static String CLICKED_FISH_EXTRA_KEY = "clicked-fish";
-    private static String LENGTH_UNITS = " cm";
+    private static final String CLICKED_FISH_EXTRA_KEY = "clicked-fish";
+    private static final String LENGTH_UNITS = " cm";
     private ListView mPersonalRecordsListView;
     private ArrayAdapter<FishRecord> mPersonalRecordsArrayAdapter;
-    private static List<FishRecord> mPersonalFishRecordRecordsList;
+    private List<FishRecord> mPersonalFishRecordRecordsList;
     private RepositoryBase<FishRecord> mFishRecordRepository;
 
     public RecordsListFragment() {
@@ -100,7 +100,7 @@ public class RecordsListFragment extends Fragment {
 
         mFishRecordRepository
                 .getAll(personalFishRecords -> {
-                    personalFishRecords.forEach(personalFishRecord->{
+                    personalFishRecords.forEach(personalFishRecord -> {
                         mPersonalFishRecordRecordsList.add(personalFishRecord);
                     });
                 });

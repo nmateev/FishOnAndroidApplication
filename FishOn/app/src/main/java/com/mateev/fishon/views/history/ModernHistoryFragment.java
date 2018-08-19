@@ -30,12 +30,13 @@ public class ModernHistoryFragment extends Fragment implements IdentifiableFragm
         return view;
     }
 
+    public static ModernHistoryFragment createNewInstance() {
+        return new ModernHistoryFragment();
+    }
+
     @Override
     public String getTitleName() {
         return MODERN_HISTORY_TITLE;
     }
 
-    public static ModernHistoryFragment createNewInstance() {
-        return new ModernHistoryFragment();
-    }
 }

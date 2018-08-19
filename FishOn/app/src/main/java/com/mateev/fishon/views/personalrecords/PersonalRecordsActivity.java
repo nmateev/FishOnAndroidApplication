@@ -47,6 +47,14 @@ public class PersonalRecordsActivity extends DrawerActivity implements View.OnCl
     }
 
     @Override
+    public void onClick(View view) {
+
+        Intent intent = new Intent(this, AddNewFishRecordActivity.class);
+        view.startAnimation(mImageButtonClickAnimation);
+        startActivity(intent);
+    }
+
+    @Override
     protected Toolbar getDrawerToolbar() {
         return mDrawerToolbar;
     }
@@ -56,11 +64,5 @@ public class PersonalRecordsActivity extends DrawerActivity implements View.OnCl
         return DRAWER_IDENTIFIER;
     }
 
-    @Override
-    public void onClick(View view) {
 
-        Intent intent = new Intent(this, AddNewFishRecordActivity.class);
-        view.startAnimation(mImageButtonClickAnimation);
-        startActivity(intent);
-    }
 }

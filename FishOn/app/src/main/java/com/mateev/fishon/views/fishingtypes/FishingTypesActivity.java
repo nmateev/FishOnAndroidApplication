@@ -14,11 +14,11 @@ public class FishingTypesActivity extends DrawerActivity implements View.OnClick
     public static final int DRAWER_IDENTIFIER = 5;
     private static final float FROM_ALPHA_ANIMATION = 1F;
     private static final float TO_ALPHA_ANIMATION = 0.3F;
-    private static String INFORMATION_TYPE_KEY = "type-information";
-    private static String TOOLBAR_TITLE_KEY = "toolbar-title";
-    private static String LAKE_FISHING_TITLE = "Lake Fishing";
-    private static String RIVER_FISHING_TITLE = "River Fishing";
-    private static String SEA_FISHING_TITLE = "Sea Fishing";
+    private static final String INFORMATION_TYPE_KEY = "type-information";
+    private static final String TOOLBAR_TITLE_KEY = "toolbar-title";
+    private static final String LAKE_FISHING_TITLE = "Lake Fishing";
+    private static final String RIVER_FISHING_TITLE = "River Fishing";
+    private static final String SEA_FISHING_TITLE = "Sea Fishing";
     private Toolbar mDrawerToolbar;
     private ImageButton mLakeFishingButton;
     private ImageButton mRiverFishingButton;

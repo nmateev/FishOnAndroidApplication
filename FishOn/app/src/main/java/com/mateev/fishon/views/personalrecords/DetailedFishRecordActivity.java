@@ -14,13 +14,13 @@ import com.sdsmdg.tastytoast.TastyToast;
 
 public class DetailedFishRecordActivity extends AppCompatActivity implements View.OnTouchListener {
     private static final String ON_CUSTOM_VIEW_TOUCH_MESSAGE = "Brings back memories!";
-    private static String CLICKED_FISH_EXTRA_KEY = "clicked-fish";
-    private static String COUNTRY_NAME_FIELD = "Country: ";
-    private static String YEAR_CAUGHT_FIELD = "Year caught: ";
-    private static String WEIGHT_FIELD = "Weight: ";
-    private static String LENGTH_FIELD = "Length: ";
-    private static String WEIGHT_UNITS = " kg";
-    private static String LENGTH_UNITS = " cm";
+    private static final String CLICKED_FISH_EXTRA_KEY = "clicked-fish";
+    private static final String COUNTRY_NAME_FIELD = "Country: ";
+    private static final String YEAR_CAUGHT_FIELD = "Year caught: ";
+    private static final String WEIGHT_FIELD = "Weight: ";
+    private static final String LENGTH_FIELD = "Length: ";
+    private static final String WEIGHT_UNITS = " kg";
+    private static final String LENGTH_UNITS = " cm";
     private TextView mFishFieldCountry;
     private TextView mFishFieldYearCaught;
     private TextView mFishFieldWeight;

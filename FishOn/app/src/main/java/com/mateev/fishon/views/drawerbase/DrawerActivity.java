@@ -24,13 +24,13 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import java.util.Objects;
 
 public abstract class DrawerActivity extends AppCompatActivity {
-    private static String HOME_DRAWER_ITEM_NAME = "Home";
-    private static String WISH_LIST_DRAWER_ITEM_NAME = "Wish List";
-    private static String VISITED_PLACES_DRAWER_ITEM_NAME = "Visited Places";
-    private static String PERSONAL_RECORDS_DRAWER_ITEM_NAME = "Personal Records";
-    private static String FISHING_TYPES_DRAWER_ITEM_NAME = "Fishing Types";
-    private static String HISTORY_DRAWER_ITEM_NAME = "History";
-    private static String ABOUT_DRAWER_ITEM_NAME = "About";
+    private static final String HOME_DRAWER_ITEM_NAME = "Home";
+    private static final String WISH_LIST_DRAWER_ITEM_NAME = "Wish List";
+    private static final String VISITED_PLACES_DRAWER_ITEM_NAME = "Visited Places";
+    private static final String PERSONAL_RECORDS_DRAWER_ITEM_NAME = "Personal Records";
+    private static final String FISHING_TYPES_DRAWER_ITEM_NAME = "Fishing Types";
+    private static final String HISTORY_DRAWER_ITEM_NAME = "History";
+    private static final String ABOUT_DRAWER_ITEM_NAME = "About";
     private Drawer mDrawer;
 
     private void setupDrawer() {

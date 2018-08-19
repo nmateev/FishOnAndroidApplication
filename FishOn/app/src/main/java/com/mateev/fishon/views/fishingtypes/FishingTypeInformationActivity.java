@@ -9,9 +9,9 @@ import com.mateev.fishon.R;
 import com.mateev.fishon.views.drawerbase.DrawerActivity;
 
 public class FishingTypeInformationActivity extends DrawerActivity {
-    private static String INFORMATION_TYPE_KEY = "type-information";
-    private static String TOOLBAR_TITLE_KEY = "toolbar-title";
-    private static int TOOLBAR_TITLE_MARGIN = 20;
+    private static final String INFORMATION_TYPE_KEY = "type-information";
+    private static final String TOOLBAR_TITLE_KEY = "toolbar-title";
+    private static final int TOOLBAR_TITLE_MARGIN = 20;
     private Toolbar mDrawerToolbar;
     private TextView mFishingInformationTextView;
 

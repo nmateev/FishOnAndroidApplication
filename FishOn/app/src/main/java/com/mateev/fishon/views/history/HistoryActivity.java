@@ -19,23 +19,25 @@ public class HistoryActivity extends DrawerActivity {
     public static final int PRE_HISTORY_FRAGMENT_IDENTIFIER = 0;
     public static final int EARLY_HISTORY_FRAGMENT_IDENTIFIER = 1;
     public static final int MODERN_HISTORY_FRAGMENT_IDENTIFIER = 2;
-    private Toolbar mDrawerToolbar;
 
+    private static HashMap<Integer, IdentifiableFragment> sIdentificationAndFragments;
+
+    private Toolbar mDrawerToolbar;
     private ViewPager mViewPager;
     private ViewPagerAdapter mViewPagerAdapter;
     private TabLayout mTabLayout;
-    private static HashMap<Integer, IdentifiableFragment> mIdentificationAndFragments;
+
 
 
     static {
-        mIdentificationAndFragments = new HashMap<>();
+        sIdentificationAndFragments = new HashMap<>();
         PreHistoryFragment preHistory = PreHistoryFragment.createNewInstance();
         EarlyHistoryFragment earlyHistory = EarlyHistoryFragment.createNewInstance();
         ModernHistoryFragment modernHistory = ModernHistoryFragment.createNewInstance();
 
-        mIdentificationAndFragments.put(PRE_HISTORY_FRAGMENT_IDENTIFIER, preHistory);
-        mIdentificationAndFragments.put(EARLY_HISTORY_FRAGMENT_IDENTIFIER, earlyHistory);
-        mIdentificationAndFragments.put(MODERN_HISTORY_FRAGMENT_IDENTIFIER, modernHistory);
+        sIdentificationAndFragments.put(PRE_HISTORY_FRAGMENT_IDENTIFIER, preHistory);
+        sIdentificationAndFragments.put(EARLY_HISTORY_FRAGMENT_IDENTIFIER, earlyHistory);
+        sIdentificationAndFragments.put(MODERN_HISTORY_FRAGMENT_IDENTIFIER, modernHistory);
     }
 
     public HistoryActivity() {
@@ -74,13 +76,13 @@ public class HistoryActivity extends DrawerActivity {
 
         mTabLayout
                 .addTab(mTabLayout.newTab()
-                        .setText(mIdentificationAndFragments.get(PRE_HISTORY_FRAGMENT_IDENTIFIER).getTitleName()));
+                        .setText(sIdentificationAndFragments.get(PRE_HISTORY_FRAGMENT_IDENTIFIER).getTitleName()));
         mTabLayout
                 .addTab(mTabLayout.newTab()
-                        .setText(mIdentificationAndFragments.get(EARLY_HISTORY_FRAGMENT_IDENTIFIER).getTitleName()));
+                        .setText(sIdentificationAndFragments.get(EARLY_HISTORY_FRAGMENT_IDENTIFIER).getTitleName()));
         mTabLayout
                 .addTab(mTabLayout.newTab()
-                        .setText(mIdentificationAndFragments.get(MODERN_HISTORY_FRAGMENT_IDENTIFIER).getTitleName()));
+                        .setText(sIdentificationAndFragments.get(MODERN_HISTORY_FRAGMENT_IDENTIFIER).getTitleName()));
 
     }
 
@@ -96,30 +98,30 @@ public class HistoryActivity extends DrawerActivity {
         public Fragment getItem(int position) {
             if (position == PRE_HISTORY_FRAGMENT_IDENTIFIER) {
 
-                return (Fragment) mIdentificationAndFragments.get(PRE_HISTORY_FRAGMENT_IDENTIFIER);
+                return (Fragment) sIdentificationAndFragments.get(PRE_HISTORY_FRAGMENT_IDENTIFIER);
             } else if (position == EARLY_HISTORY_FRAGMENT_IDENTIFIER) {
-                return (Fragment) mIdentificationAndFragments.get(EARLY_HISTORY_FRAGMENT_IDENTIFIER);
+                return (Fragment) sIdentificationAndFragments.get(EARLY_HISTORY_FRAGMENT_IDENTIFIER);
 
             } else {
-                return (Fragment) mIdentificationAndFragments.get(MODERN_HISTORY_FRAGMENT_IDENTIFIER);
+                return (Fragment) sIdentificationAndFragments.get(MODERN_HISTORY_FRAGMENT_IDENTIFIER);
             }
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             if (position == PRE_HISTORY_FRAGMENT_IDENTIFIER) {
-                return mIdentificationAndFragments.get(PRE_HISTORY_FRAGMENT_IDENTIFIER).getTitleName();
+                return sIdentificationAndFragments.get(PRE_HISTORY_FRAGMENT_IDENTIFIER).getTitleName();
             } else if (position == EARLY_HISTORY_FRAGMENT_IDENTIFIER) {
-                return mIdentificationAndFragments.get(EARLY_HISTORY_FRAGMENT_IDENTIFIER).getTitleName();
+                return sIdentificationAndFragments.get(EARLY_HISTORY_FRAGMENT_IDENTIFIER).getTitleName();
 
             } else {
-                return mIdentificationAndFragments.get(MODERN_HISTORY_FRAGMENT_IDENTIFIER).getTitleName();
+                return sIdentificationAndFragments.get(MODERN_HISTORY_FRAGMENT_IDENTIFIER).getTitleName();
             }
         }
 
         @Override
         public int getCount() {
-            return mIdentificationAndFragments.size();
+            return sIdentificationAndFragments.size();
         }
     }
 }

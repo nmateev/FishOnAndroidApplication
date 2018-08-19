@@ -27,7 +27,7 @@ public class HomeActivityFragment extends Fragment {
     private Button mQuoteButton;
     private TextView mQuoteTextView;
     private AlphaAnimation mButtonClickAnimation;
-    private static ArrayList<Quote> mFishingQuotesList;
+    private static ArrayList<Quote> sFishingQuotesList;
     private RepositoryBase<Quote> mQuotesRepository;
 
     public HomeActivityFragment() {
@@ -47,16 +47,16 @@ public class HomeActivityFragment extends Fragment {
         mButtonClickAnimation = new AlphaAnimation(FROM_ALPHA_ANIMATION, TO_ALPHA_ANIMATION);
 
         if (Objects.equals(savedInstanceState, null)) {
-            mFishingQuotesList = new ArrayList<>();
+            sFishingQuotesList = new ArrayList<>();
             mQuotesRepository = FishOnApp.getQuotesRepository();
-            mQuotesRepository.getAll(mFishingQuotesList::addAll);
+            mQuotesRepository.getAll(sFishingQuotesList::addAll);
             mQuoteTextView.setText(getString(R.string.initial_fishing_quote));
         } else {
             try {
-                mFishingQuotesList = (ArrayList<Quote>) savedInstanceState.getSerializable(SAVED_QUOTES_KEY);
+                sFishingQuotesList = (ArrayList<Quote>) savedInstanceState.getSerializable(SAVED_QUOTES_KEY);
             } catch (ClassCastException cce) {
-                mFishingQuotesList = new ArrayList<>();
-                mQuotesRepository.getAll(mFishingQuotesList::addAll);
+                sFishingQuotesList = new ArrayList<>();
+                mQuotesRepository.getAll(sFishingQuotesList::addAll);
             }
             String savedQuote = savedInstanceState.getString(CURRENT_QUOTE_KEY);
             mQuoteTextView.setText(savedQuote);
@@ -76,7 +76,7 @@ public class HomeActivityFragment extends Fragment {
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putSerializable(SAVED_QUOTES_KEY, mFishingQuotesList);
+        outState.putSerializable(SAVED_QUOTES_KEY, sFishingQuotesList);
         outState.putString(CURRENT_QUOTE_KEY, mQuoteTextView.getText().toString());
 
     }
@@ -88,10 +88,10 @@ public class HomeActivityFragment extends Fragment {
 
     private static String prepareNextQuote() {
         int randIndex = getRandomQuoteIndex();
-        String quote = mFishingQuotesList
+        String quote = sFishingQuotesList
                 .get(randIndex)
                 .getQuoteText();
-        String author = mFishingQuotesList
+        String author = sFishingQuotesList
                 .get(randIndex)
                 .getAuthor();
         return new StringBuilder()
@@ -103,7 +103,7 @@ public class HomeActivityFragment extends Fragment {
     private static int getRandomQuoteIndex() {
 
         Random random = new Random();
-        return random.nextInt(mFishingQuotesList.size());
+        return random.nextInt(sFishingQuotesList.size());
     }
 }
 
