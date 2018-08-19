@@ -1,4 +1,4 @@
-package com.mateev.fishon.views.locatons;
+package com.mateev.fishon.views.locations;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -29,9 +29,9 @@
         <activity android:name=".views.personalrecords.PersonalRecordsActivity" android:screenOrientation="portrait"/>
         <activity android:name=".views.personalrecords.DetailedFishRecordActivity" />
         <activity android:name=".views.personalrecords.AddNewFishRecordActivity" />
-        <activity android:name=".views.locatons.visitedplaces.VisitedPlacesActivity" android:screenOrientation="portrait" />
-        <activity android:name=".views.locatons.wishlist.WishListActivity" android:screenOrientation="portrait" />
-        <activity android:name=".views.locatons.AddNewLocationActivity" />
+        <activity android:name=".views.locations.visitedplaces.VisitedPlacesActivity" android:screenOrientation="portrait" />
+        <activity android:name=".views.locations.wishlist.WishListActivity" android:screenOrientation="portrait" />
+        <activity android:name=".views.locations.AddNewLocationActivity" />
     </application>
 
 </manifest>

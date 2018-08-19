@@ -1,4 +1,4 @@
-package com.mateev.fishon.views.locatons.visitedplaces;
+package com.mateev.fishon.views.locations.visitedplaces;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,8 +14,8 @@ import com.mateev.fishon.models.Location;
 import com.mateev.fishon.models.VisitedLocation;
 import com.mateev.fishon.repository.RepositoryBase;
 import com.mateev.fishon.views.drawerbase.DrawerActivity;
-import com.mateev.fishon.views.locatons.AddNewLocationActivity;
-import com.mateev.fishon.views.locatons.LocationConvertibleListViewFragment;
+import com.mateev.fishon.views.locations.AddNewLocationActivity;
+import com.mateev.fishon.views.locations.LocationConvertibleListViewFragment;
 
 import java.util.ArrayList;
 import java.util.Objects;
