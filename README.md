@@ -3,7 +3,7 @@
 **<h1>Project name:</h1>** "Fish On"
 
 **<h1>Overall:</h1>**
- The android application "Fish On" was created in accordance to Telerik Academy project assignment. It  uses Firebase Database to store and retrieve user data. 
+ *The android application "Fish On" was created in accordance to Telerik Academy project assignment. It  uses Firebase Database to store and retrieve user data.* 
 
 **<h1>Contributors:</h1>**
 Nikolay Mateev (nmateev)
