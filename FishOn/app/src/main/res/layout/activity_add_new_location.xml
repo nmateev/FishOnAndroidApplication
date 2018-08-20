@@ -34,7 +34,7 @@
         android:layout_below="@id/tv_fill_all_fields_message"
         android:layout_centerInParent="true"
         android:layout_marginTop="@dimen/MediumMargin"
-        android:hint="Country"
+        android:hint="@string/country_hint"
         android:inputType="text" />
 
     <EditText
@@ -44,7 +44,7 @@
         android:layout_below="@id/et_add_country_field"
         android:layout_centerInParent="true"
         android:layout_marginTop="@dimen/MediumMargin"
-        android:hint="Name"
+        android:hint="@string/name_hint"
         android:inputType="text" />
 
     <Spinner

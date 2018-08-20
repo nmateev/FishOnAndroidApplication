@@ -154,6 +154,13 @@
         hat can pinch.
     </string>
     <string name="initial_fishing_quote">\"There’s a fine line between fishing and standing on the shore like an idiot.\"\n\n\t\t\t\t(Steven Wright)</string>
+    <string name="species_hint">Species</string>
+    <string name="country_hint">Country</string>
+    <string name="year_caught_hint">Year caught</string>
+    <string name="weight_in_kg_hint">Weight in kg.</string>
+    <string name="length_in_metres_hint">Length in metres</string>
+    <string name="country_hint">Country</string>
+    <string name="name_hint">Name</string>
     <string-array name="water_basin_types_array">
         <item>River</item>
         <item>Lake</item>

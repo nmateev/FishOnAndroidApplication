@@ -66,7 +66,7 @@ public class LocationConvertibleListViewFragment extends Fragment{
                     LayoutInflater inflater = LayoutInflater.from(this.getContext());
                     view = inflater.inflate(R.layout.item_location_view, parent, false);
                 }
-                //to do  get all information about record
+
                 TextView mCountryName = Objects
                         .requireNonNull(view)
                         .findViewById(R.id.tv_country_name);

@@ -34,7 +34,7 @@
         android:layout_below="@id/tv_fill_all_fields_message"
         android:layout_centerInParent="true"
         android:layout_marginTop="@dimen/MediumMargin"
-        android:hint="Species"
+        android:hint="@string/species_hint"
         android:inputType="text" />
 
     <EditText
@@ -44,7 +44,7 @@
         android:layout_below="@id/et_add_fish_species_field"
         android:layout_centerInParent="true"
         android:layout_marginTop="@dimen/MediumMargin"
-        android:hint="Country"
+        android:hint="@string/country_hint"
         android:inputType="text" />
 
     <EditText
@@ -54,7 +54,7 @@
         android:layout_below="@id/et_add_country_caught__field"
         android:layout_centerInParent="true"
         android:layout_marginTop="@dimen/MediumMargin"
-        android:hint="Year caught"
+        android:hint="@string/year_caught_hint"
         android:inputType="number" />
 
     <EditText
@@ -64,7 +64,7 @@
         android:layout_below="@id/et_add_year_caught_field"
         android:layout_centerInParent="true"
         android:layout_marginTop="@dimen/MediumMargin"
-        android:hint="Weight in kg."
+        android:hint="@string/weight_in_kg_hint"
         android:inputType="numberDecimal" />
 
     <EditText
@@ -74,7 +74,7 @@
         android:layout_below="@id/et_add_weight_field"
         android:layout_centerInParent="true"
         android:layout_marginTop="@dimen/MediumMargin"
-        android:hint="Length in metres"
+        android:hint="@string/length_in_metres_hint"
         android:inputType="numberDecimal" />
 
     <Button

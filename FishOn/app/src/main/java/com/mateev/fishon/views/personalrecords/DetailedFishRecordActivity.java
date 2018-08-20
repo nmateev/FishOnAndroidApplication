@@ -80,7 +80,8 @@ public class DetailedFishRecordActivity extends AppCompatActivity implements Vie
                 .makeText(this,
                         ON_CUSTOM_VIEW_TOUCH_MESSAGE,
                         TastyToast.LENGTH_SHORT,
-                        TastyToast.CONFUSING).show();
+                        TastyToast.CONFUSING)
+                .show();
         return true;
 
     }

@@ -42,7 +42,6 @@ public class HomeActivityFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home_activity, container, false);
 
         mQuoteTextView = root.findViewById(R.id.tv_quote_text);
-        mQuoteTextView.setMovementMethod(new ScrollingMovementMethod());
         mQuoteButton = root.findViewById(R.id.btn_fish_for_quote);
         mButtonClickAnimation = new AlphaAnimation(FROM_ALPHA_ANIMATION, TO_ALPHA_ANIMATION);
 
